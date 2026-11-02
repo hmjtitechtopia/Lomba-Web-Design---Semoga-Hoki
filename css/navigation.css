@@ -1,0 +1,299 @@
+@font-face {
+  font-family: Fredoka;
+  src: url("../assets/fonts/fredoka-400.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: Fredoka;
+  src: url("../assets/fonts/fredoka-500.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: Fredoka;
+  src: url("../assets/fonts/fredoka-600.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: Fredoka;
+  src: url("../assets/fonts/fredoka-700.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+.site-navigation {
+  position: fixed;
+  top: 18px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+  font-family: Fredoka, Nunito, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: normal;
+}
+.site-navigation .pill-nav {
+  pointer-events: auto;
+  width: min(1360px, calc(100% - 32px));
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 999px;
+  padding: 8px 16px 8px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow:
+    0 16px 36px -10px #0f4d3a1f,
+    0 4px 12px #00000008;
+  border: 1.5px solid white;
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.3s,
+    box-shadow 0.3s,
+    background 0.3s;
+  position: relative;
+}
+.site-navigation .pill-nav:hover {
+  background: #fff;
+  box-shadow:
+    0 22px 46px -10px #0f4d3a2e,
+    0 6px 16px #0000000a;
+}
+.site-navigation .pill-nav.nav-hidden {
+  transform: translateY(calc(-100% - 28px));
+  opacity: 0;
+  pointer-events: none;
+}
+.site-navigation .site-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.site-navigation .site-logo {
+  display: block;
+  width: 168px;
+  height: auto;
+  object-fit: contain;
+}
+.footer-logo {
+  display: block;
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+.site-navigation .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+.site-navigation .nav-links li {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.site-navigation .nav-links a {
+  font-family: Fredoka, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: normal;
+  color: #155240;
+  padding: 7px 13px;
+  border-radius: 999px;
+  display: inline-flex;
+  white-space: nowrap;
+  text-decoration: none;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.site-navigation .nav-links a:hover {
+  color: #1f8a63;
+  background: #1f8a6314;
+}
+.site-navigation .nav-links a.pill-active {
+  background: white;
+  color: #1f8a63;
+  font-weight: 700;
+  box-shadow:
+    0 4px 14px #1f8a6329,
+    inset 0 1px 1px #ffffffe6;
+  padding: 6px 13px;
+}
+.site-navigation .nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.site-navigation .btn-orange-pill {
+  background: linear-gradient(135deg, #ff764c, #ff5429);
+  color: white;
+  font-family: Fredoka, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: normal;
+  padding: 11px 26px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow:
+    0 10px 22px -5px #ff542980,
+    inset 0 1px 1px #ffffff66;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+.site-navigation .btn-orange-pill:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px -5px #ff5429a6;
+}
+.site-navigation .menu-toggle {
+  display: none;
+  border: 0;
+  background: #cdefd9;
+  color: #0f4d3a;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  font-size: 23px;
+  padding: 0;
+  cursor: pointer;
+}
+.site-navigation a:focus-visible,
+.site-navigation button:focus-visible {
+  outline: 3px solid #d85d38;
+  outline-offset: 4px;
+}
+@media (min-width: 1101px) {
+  body[data-site-page="destinasi"] .screen {
+    padding-top: 133px;
+  }
+}
+html {
+  scroll-padding-top: 110px;
+}
+body[data-site-page="cerita"] .cover {
+  margin-top: 0;
+  padding-top: 104px;
+  box-sizing: content-box;
+}
+body[data-site-page="cerita"] .cover-image {
+  inset: 0;
+}
+body[data-site-page="cerita"] .cover-frame {
+  transform: translateY(104px);
+}
+@media (max-width: 1440px) {
+  .site-navigation .pill-nav {
+    gap: 12px;
+  }
+  .site-navigation .menu-toggle {
+    display: block;
+  }
+  .site-navigation .nav-links {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 12px);
+    background: #fff;
+    border: 1px solid #cdefd9;
+    border-radius: 24px;
+    box-shadow: 0 16px 35px #0f4d3a26;
+    padding: 16px;
+    max-height: calc(100dvh - 120px);
+    overflow: auto;
+  }
+  .site-navigation .nav-links.is-open {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .site-navigation .nav-links li {
+    display: block;
+  }
+  .site-navigation .nav-links a {
+    display: block;
+    padding: 12px 16px;
+  }
+  .site-navigation .nav-links a.pill-active {
+    padding: 12px 16px;
+  }
+  .site-navigation .nav-cta {
+    margin-left: auto;
+  }
+}
+@media (max-width: 580px) {
+  .site-navigation .site-logo {
+    width: 124px;
+  }
+  .site-navigation {
+    top: 10px;
+    padding: 0 10px;
+  }
+  .site-navigation .pill-nav {
+    width: 100%;
+    padding: 6px 10px 6px 14px;
+    gap: 8px;
+  }
+  .site-navigation .site-brand {
+    gap: 8px;
+  }
+  .site-navigation .btn-orange-pill {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+  .site-navigation .nav-cta {
+    gap: 8px;
+  }
+  body[data-site-page="cerita"] .cover {
+    margin-top: 0;
+    padding-top: 80px;
+  }
+  body[data-site-page="cerita"] .cover-frame {
+    transform: translateY(80px);
+  }
+}
+@media (max-width: 380px) {
+  .site-navigation .site-logo {
+    width: 100px;
+  }
+  .site-navigation .brand-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .site-navigation .btn-orange-pill {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .site-navigation .nav-cta {
+    gap: 5px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-navigation * {
+    transition: none !important;
+  }
+}

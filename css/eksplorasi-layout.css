@@ -1,0 +1,33 @@
+
+body[data-site-page='art'] > main,
+body[data-site-page='taste'] > main {
+  padding-top: 0;
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+}
+.site-navigation *, .sakala-footer * { box-sizing: border-box; }
+.site-navigation .pill-nav { height: auto; }
+.site-navigation .nav-links a { cursor: pointer; }
+@media (max-width: 580px) {
+  body[data-site-page='art'] > main,
+  body[data-site-page='taste'] > main { padding-top: 0; }
+}
+
+body[data-site-page='taste'] #stage-root {
+  padding-top: 112px !important;
+}
+body[data-site-page='art'] #stage-root {
+  margin-top: 0;
+  border-top: 112px solid transparent;
+  background: #b1d3f8;
+}
+body[data-site-page='art'] #fullBleedBg {
+  top: -112px !important;
+  height: calc(100% + 112px) !important;
+}
+@media (max-width: 580px) {
+  body[data-site-page='taste'] #stage-root { padding-top: 88px !important; }
+  body[data-site-page='art'] #stage-root { border-top-width: 88px; }
+  body[data-site-page='art'] #fullBleedBg { top: -88px !important; height: calc(100% + 88px) !important; }
+}

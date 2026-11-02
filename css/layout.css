@@ -1,0 +1,22 @@
+
+:root {
+  --page-width: 1920px;
+}
+body[data-site-page] {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+body[data-site-page] > main {
+  width: 100%;
+  max-width: var(--page-width);
+  margin-inline: auto;
+}
+@media (min-width: 1921px) {
+  html:has(body[data-site-page='alam']) {
+    font-size: 16px;
+  }
+  html:has(body[data-site-page='cerita']) {
+    font-size: 19.2px;
+  }
+}

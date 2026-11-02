@@ -1,0 +1,831 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#B1D3F8" />
+    <meta
+      name="description"
+      content="Jelajahi destinasi Bali, temukan alam, susun rencana perjalanan, dan kenali cerita kehidupan Bali bersama SAKALA."
+    />
+    <title>Jelajah Bali — SAKALA</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/images/logos/sakala-flower.webp"
+    />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/destinasi.css" />
+    <link rel="stylesheet" href="css/destinasi-responsive.css" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/navigation.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+  </head>
+  <body data-site-page="destinasi">
+    <div class="site-navigation">
+      <nav class="pill-nav" aria-label="Navigasi utama">
+        <a class="site-brand" href="index.html" aria-label="SAKALA, beranda"
+          ><img
+            class="site-logo"
+            src="assets/images/logos/sakala-logo.webp"
+            alt="SAKALA"
+            width="2120"
+            height="740"
+        /></a>
+        <ul class="nav-links" id="site-nav-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li>
+            <a
+              href="destinasi.html#hero"
+              class="pill-active"
+              aria-current="page"
+              >Destinasi</a
+            >
+          </li>
+          <li><a href="alam-bali.html">Alam Bali</a></li>
+          <li><a href="art.html">Seni & Budaya</a></li>
+          <li><a href="taste.html">Kuliner Bali</a></li>
+          <li><a href="kehidupan-lokal.html">Kehidupan Lokal</a></li>
+          <li><a href="cerita-bali.html">Cerita Bali</a></li>
+          <li><a href="tentang.html">Tentang</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a class="btn-orange-pill" href="destinasi.html#rencana"
+            >Rencanakan trip</a
+          ><button
+            class="menu-toggle"
+            type="button"
+            aria-controls="site-nav-links"
+            aria-expanded="false"
+            aria-label="Buka menu"
+          >
+            ☰
+          </button>
+        </div>
+      </nav>
+    </div>
+    <a class="skip-link" href="#main-content">Lewati ke konten</a>
+
+    <main id="main-content">
+      <section
+        class="screen"
+        id="hero"
+        role="region"
+        aria-label="Hero Jelajah Bali"
+        data-design-status="approved"
+        data-main-section="hero"
+      >
+        <img
+          class="scenery"
+          src="assets/images/backgrounds/destinasi-scenery.webp"
+          alt=""
+          aria-hidden="true"
+          draggable="false"
+        />
+
+        <div class="heading">
+          <div class="section-marker">02 / JELAJAH PULAU DEWATA</div>
+          <h1>Jelajah Bali</h1>
+          <p>Pilih tempatnya, mulai petualanganmu.</p>
+        </div>
+        <div class="toolbar" aria-label="Filter destinasi">
+          <form class="search" role="search">
+            <img
+              class="icon"
+              src="assets/images/decorations/destinasi-05.png"
+              alt=""
+              aria-hidden="true"
+              draggable="false"
+            /><input
+              type="search"
+              id="destination-search"
+              autocomplete="off"
+              aria-label="Cari destinasi"
+              placeholder="Cari destinasi atau wilayah..."
+            />
+          </form>
+          <button class="pill active">Semua</button
+          ><button class="pill">
+            <img
+              class="icon"
+              src="assets/images/decorations/destinasi-06.png"
+              alt=""
+              aria-hidden="true"
+              draggable="false"
+            />Pantai</button
+          ><button class="pill">
+            <img
+              class="icon"
+              src="assets/images/decorations/destinasi-07.png"
+              alt=""
+              aria-hidden="true"
+              draggable="false"
+            />Alam</button
+          ><button class="pill">
+            <img
+              class="icon"
+              src="assets/images/decorations/destinasi-08.png"
+              alt=""
+              aria-hidden="true"
+              draggable="false"
+            />Budaya</button
+          ><label class="region-control"
+            ><span class="sr-only">Filter wilayah</span
+            ><select id="region-filter">
+              <option value="">Wilayah</option>
+              <option>Gianyar</option>
+              <option>Badung</option>
+              <option>Tabanan</option>
+              <option>Klungkung</option>
+            </select></label
+          ><button class="reset">
+            Reset<img
+              class="icon"
+              src="assets/images/decorations/destinasi-09.png"
+              alt=""
+              aria-hidden="true"
+              draggable="false"
+            />
+          </button>
+        </div>
+        <div class="island-note">Klik pin, temukan ceritanya</div>
+        <div class="map-window" aria-label="Peta destinasi Bali">
+          <div class="island-area">
+            <img
+              decoding="async"
+              class="island-img"
+              src="assets/images/illustrations/pulau_interaktif.webp"
+              alt="Ilustrasi pulau dari gambar pengguna"
+            />
+            <img
+              class="map-route"
+              src="assets/images/decorations/destinasi-map-route.webp"
+              alt=""
+              aria-hidden="true"
+              draggable="false"
+            />
+            <div class="route-legend"><span></span>Rute inspirasi</div>
+            <div class="locator secondary" style="left: 18%; top: 31%">
+              <span class="ball"></span><span class="loc-label">Jembrana</span>
+            </div>
+            <div class="locator secondary" style="left: 73%; top: 21%">
+              <span class="ball"></span><span class="loc-label">Kintamani</span>
+            </div>
+            <div class="locator secondary" style="left: 90%; top: 49%">
+              <span class="ball"></span
+              ><span class="loc-label">Karangasem</span>
+            </div>
+            <a
+              class="photo-marker"
+              data-destination="ulun-danu"
+              style="left: 38.5965%; top: 51.0204%"
+              href="#"
+              aria-label="Lihat Pura Ulun Danu"
+              ><span class="marker-image"
+                ><img
+                  decoding="async"
+                  src="assets/images/photos/ulun-danu.jpg"
+                  alt="Foto asli Pura Ulun Danu" /></span
+              ><span class="marker-caption"
+                ><img
+                  class="icon"
+                  src="assets/images/decorations/destinasi-12.png"
+                  alt=""
+                  aria-hidden="true"
+                  draggable="false"
+                />Pura Ulun Danu</span
+              ><span class="marker-stem"></span
+              ><span class="marker-anchor"></span
+            ></a>
+            <a
+              class="photo-marker chosen"
+              data-destination="tegallalang"
+              style="left: 62.9825%; top: 56.1224%"
+              href="#"
+              aria-label="Lihat Tegallalang"
+              ><span class="marker-image"
+                ><img
+                  decoding="async"
+                  src="assets/images/photos/tegallalang.jpg"
+                  alt="Foto asli Tegallalang" /></span
+              ><span class="marker-caption"
+                ><img
+                  class="icon"
+                  src="assets/images/decorations/destinasi-13.png"
+                  alt=""
+                  aria-hidden="true"
+                  draggable="false"
+                />Tegallalang</span
+              ><span class="marker-stem"></span
+              ><span class="marker-anchor"></span
+            ></a>
+            <a
+              class="photo-marker"
+              data-destination="melasti"
+              style="left: 57.9825%; top: 90.9864%"
+              href="#"
+              aria-label="Lihat Pantai Melasti"
+              ><span class="marker-image"
+                ><img
+                  decoding="async"
+                  src="assets/images/photos/melasti.webp"
+                  alt="Foto asli Pantai Melasti" /></span
+              ><span class="marker-caption"
+                ><img
+                  class="icon"
+                  src="assets/images/decorations/destinasi-12.png"
+                  alt=""
+                  aria-hidden="true"
+                  draggable="false"
+                />Pantai Melasti</span
+              ><span class="marker-stem"></span
+              ><span class="marker-anchor"></span
+            ></a>
+            <a
+              class="photo-marker"
+              data-destination="nusa-penida"
+              style="left: 84.0351%; top: 90.9864%"
+              href="#"
+              aria-label="Lihat Nusa Penida"
+              ><span class="marker-image"
+                ><img
+                  decoding="async"
+                  src="assets/images/photos/nusa-penida.jpg"
+                  alt="Foto asli Nusa Penida" /></span
+              ><span class="marker-caption"
+                ><img
+                  class="icon"
+                  src="assets/images/decorations/destinasi-12.png"
+                  alt=""
+                  aria-hidden="true"
+                  draggable="false"
+                />Nusa Penida</span
+              ><span class="marker-stem"></span
+              ><span class="marker-anchor"></span
+            ></a>
+          </div>
+        </div>
+        <div class="explore-hint">
+          Kenali Bali,<br />satu tempat<br />setiap perjalanan.
+        </div>
+        <div class="compass">U</div>
+        <aside class="sidebar" aria-label="Destinasi terpilih">
+          <div class="side-head">
+            <div>
+              <h2>Destinasi pilihan</h2>
+              <p>Temukan tempat favoritmu</p>
+            </div>
+            <span class="side-location"
+              ><img
+                class="icon"
+                src="assets/images/decorations/destinasi-18.png"
+                alt=""
+                aria-hidden="true"
+                draggable="false"
+            /></span>
+          </div>
+          <div class="main-photo">
+            <img
+              decoding="async"
+              src="assets/images/photos/tegallalang.jpg"
+              alt="Foto asli sawah Tegallalang"
+            /><button class="save" aria-label="Simpan Tegallalang">
+              <img
+                class="icon"
+                src="assets/images/decorations/destinasi-19.png"
+                alt=""
+                aria-hidden="true"
+                draggable="false"
+              /></button
+            ><span class="photo-badge">Alam & sawah</span>
+          </div>
+          <div class="side-body">
+            <h3>Tegallalang</h3>
+            <div class="loc">
+              <img
+                class="icon"
+                src="assets/images/decorations/destinasi-20.png"
+                alt=""
+                aria-hidden="true"
+                draggable="false"
+              />Gianyar, Bali
+            </div>
+            <p>
+              Sawah berundak, udara sejuk, dan jalan kecil untuk menikmati sisi
+              tenang Bali.
+            </p>
+            <button class="btn">
+              Lihat destinasi<img
+                class="icon"
+                src="assets/images/decorations/destinasi-21.png"
+                alt=""
+                aria-hidden="true"
+                draggable="false"
+              />
+            </button>
+            <p class="source">Foto: Tom Fisk / Pexels</p>
+          </div>
+          <div class="other-places">
+            <div class="other-title">Jelajah berikutnya</div>
+            <div class="place-row">
+              <img
+                decoding="async"
+                src="assets/images/photos/melasti.webp"
+                alt="Foto Pantai Melasti"
+              />
+              <div>
+                <h3>Pantai Melasti</h3>
+                <p>Badung · Pantai</p>
+              </div>
+              <img
+                class="icon"
+                src="assets/images/decorations/destinasi-22.png"
+                alt=""
+                aria-hidden="true"
+                draggable="false"
+              />
+            </div>
+            <div class="place-row">
+              <img
+                decoding="async"
+                src="assets/images/photos/ulun-danu.jpg"
+                alt="Foto Pura Ulun Danu"
+              />
+              <div>
+                <h3>Pura Ulun Danu</h3>
+                <p>Tabanan · Budaya</p>
+              </div>
+              <img
+                class="icon"
+                src="assets/images/decorations/destinasi-22.png"
+                alt=""
+                aria-hidden="true"
+                draggable="false"
+              />
+            </div>
+            <a class="see-all" href="#hero" data-reset
+              >Lihat semua destinasi<img
+                class="icon"
+                src="assets/images/decorations/destinasi-24.png"
+                alt=""
+                aria-hidden="true"
+                draggable="false"
+            /></a>
+          </div>
+        </aside>
+        <p class="filter-status" role="status" aria-live="polite"></p>
+        <div class="empty-results" hidden>
+          <strong>Belum ada destinasi yang cocok.</strong>
+          <p>Coba kata lain atau hapus filter.</p>
+          <button class="btn" data-reset>Hapus filter</button>
+        </div>
+        <div class="carousel-title">
+          <span class="line"></span>Satu pulau, banyak cerita
+        </div>
+        <div class="postcards">
+          <article class="postcard selected" data-destination="tegallalang">
+            <img
+              decoding="async"
+              src="assets/images/photos/tegallalang.jpg"
+              alt="Foto Tegallalang"
+            /><button class="save" aria-label="Simpan Tegallalang">
+              <img
+                class="icon"
+                src="assets/images/decorations/destinasi-25.png"
+                alt=""
+                aria-hidden="true"
+                draggable="false"
+              />
+            </button>
+            <h3>Tegallalang</h3>
+            <p>Gianyar · Alam</p>
+          </article>
+          <article class="postcard" data-destination="melasti">
+            <img
+              decoding="async"
+              src="assets/images/photos/melasti.webp"
+              alt="Foto Melasti"
+            /><button class="save" aria-label="Simpan Melasti">
+              <img
+                class="icon"
+                src="assets/images/decorations/destinasi-26.png"
+                alt=""
+                aria-hidden="true"
+                draggable="false"
+              />
+            </button>
+            <h3>Pantai Melasti</h3>
+            <p>Badung · Pantai</p>
+          </article>
+          <article class="postcard" data-destination="ulun-danu">
+            <img
+              decoding="async"
+              src="assets/images/photos/ulun-danu.jpg"
+              alt="Foto Ulun Danu"
+            /><button class="save" aria-label="Simpan Ulun Danu">
+              <img
+                class="icon"
+                src="assets/images/decorations/destinasi-27.png"
+                alt=""
+                aria-hidden="true"
+                draggable="false"
+              />
+            </button>
+            <h3>Pura Ulun Danu</h3>
+            <p>Tabanan · Budaya</p>
+          </article>
+          <article class="postcard" data-destination="nusa-penida">
+            <img
+              decoding="async"
+              src="assets/images/photos/nusa-penida.jpg"
+              alt="Foto Nusa Penida"
+            /><button class="save" aria-label="Simpan Nusa Penida">
+              <img
+                class="icon"
+                src="assets/images/decorations/destinasi-25.png"
+                alt=""
+                aria-hidden="true"
+                draggable="false"
+              />
+            </button>
+            <h3>Nusa Penida</h3>
+            <p>Klungkung · Petualangan</p>
+          </article>
+        </div>
+        <button
+          class="carousel-arrow"
+          aria-label="Destinasi berikutnya"
+        ></button>
+        <div class="mascot-guide">
+          <div class="speech" aria-live="polite">
+            Mau ke mana?<br />Ayo pilih tempatmu!
+          </div>
+          <img
+            class="bird"
+            src="assets/images/mascots/mascot_happy.webp"
+            alt="Maskot jalak Bali SAKALA yang ceria"
+            width="1392"
+            height="1130"
+          />
+        </div>
+        <div class="credits">
+          Foto asli: Tom Fisk, Kseniya Kobi, Musmualim & Saksham Vikram /
+          Pexels. Peta ilustratif.
+        </div>
+        <div class="progress">
+          Jelajah Bali<span></span><span></span><span></span>
+        </div>
+      </section>
+      <section class="r-section r-nature" id="alam" data-main-section="alam">
+        <img
+          class="r-wave"
+          src="assets/images/decorations/destinasi-r-wave.png"
+          alt=""
+          aria-hidden="true"
+          draggable="false"
+        />
+        <div class="r-wrap">
+          <div class="r-nature-copy">
+            <h2>Alam Bali,<br />bikin ingin<br />kembali.</h2>
+            <p>
+              Dari debur ombak sampai hijaunya sawah, selalu ada sudut alam
+              untuk kamu nikmati.
+            </p>
+            <a class="r-btn" href="alam-bali.html"
+              >Jelajahi alam Bali<img
+                class="icon"
+                src="assets/images/decorations/destinasi-31.png"
+                alt=""
+                aria-hidden="true"
+                draggable="false"
+            /></a>
+          </div>
+
+          <div class="r-nature-note">
+            <img
+              class="icon"
+              src="assets/images/decorations/destinasi-33.png"
+              alt=""
+              aria-hidden="true"
+              draggable="false"
+            /><span
+              >Ikuti rasa ingin tahumu.<br />Temukan sisi Bali versimu.</span
+            >
+          </div>
+          <div class="r-collage">
+            <div class="r-collage-blob"></div>
+            <figure class="r-photo r-beach">
+              <img
+                decoding="async"
+                src="assets/images/photos/nusa-penida.jpg"
+                alt="Tebing dan Pantai Kelingking di Nusa Penida"
+              />
+              <figcaption>
+                <img
+                  class="icon"
+                  src="assets/images/decorations/destinasi-34.png"
+                  alt=""
+                  aria-hidden="true"
+                  draggable="false"
+                />Kelingking Beach
+              </figcaption>
+            </figure>
+            <figure class="r-photo r-mountain">
+              <img
+                decoding="async"
+                src="assets/images/photos/batur.webp"
+                alt="Pemandangan Gunung Batur saat pagi"
+              />
+              <figcaption>
+                <img
+                  class="icon"
+                  src="assets/images/decorations/destinasi-35.png"
+                  alt=""
+                  aria-hidden="true"
+                  draggable="false"
+                />Kintamani
+              </figcaption>
+            </figure>
+            <figure class="r-photo r-falls">
+              <img
+                decoding="async"
+                src="assets/images/photos/waterfall.webp"
+                alt="Air terjun di hutan Bali"
+              />
+              <figcaption>
+                <img
+                  class="icon"
+                  src="assets/images/decorations/destinasi-34.png"
+                  alt=""
+                  aria-hidden="true"
+                  draggable="false"
+                />Air terjun Bali
+              </figcaption>
+            </figure>
+            <figure class="r-photo r-rice">
+              <img
+                decoding="async"
+                src="assets/images/photos/tegallalang.jpg"
+                alt="Sawah berundak di Tegallalang"
+              />
+              <figcaption>
+                <img
+                  class="icon"
+                  src="assets/images/decorations/destinasi-34.png"
+                  alt=""
+                  aria-hidden="true"
+                  draggable="false"
+                />Tegallalang
+              </figcaption>
+            </figure>
+            <img
+              class="r-collage-sparkle"
+              src="assets/images/decorations/destinasi-r-collage-sparkle.png"
+              alt=""
+              aria-hidden="true"
+              draggable="false"
+            />
+          </div>
+        </div>
+      </section>
+      <section
+        class="r-section r-plan"
+        id="rencana"
+        data-main-section="rencana"
+      >
+        <div class="r-wrap">
+          <div class="r-plan-heading">
+            <h2>Tiga hari,<br />banyak cerita.</h2>
+          </div>
+          <div class="r-plan-intro">
+            <p>
+              Mulai dari rencana ini, lalu ubah tempat dan waktunya sesuai
+              caramu menikmati Bali.
+            </p>
+            <div class="r-duration" role="group" aria-label="Durasi perjalanan">
+              <button>1 hari</button><button>2 hari</button
+              ><button class="active">3 hari</button>
+            </div>
+          </div>
+          <img
+            class="r-journey-line"
+            src="assets/images/decorations/destinasi-r-journey-line.webp"
+            alt=""
+            aria-hidden="true"
+            draggable="false"
+          />
+          <article class="r-day r-day-one">
+            <div class="r-day-image">
+              <img
+                decoding="async"
+                src="assets/images/photos/tegallalang.jpg"
+                alt="Sawah Tegallalang untuk hari pertama"
+              /><span class="r-day-number">Hari 1</span>
+            </div>
+            <h3>Ubud & hijaunya sawah</h3>
+            <p>Jelajahi Tegallalang dan nikmati suasana desa di sekitarnya.</p>
+          </article>
+          <article class="r-day r-day-two">
+            <div class="r-day-image">
+              <img
+                decoding="async"
+                src="assets/images/photos/ulun-danu.jpg"
+                alt="Pura Ulun Danu Beratan untuk hari kedua"
+              /><span class="r-day-number">Hari 2</span>
+            </div>
+            <h3>Menepi ke Danau Beratan</h3>
+            <p>Luangkan waktu di Ulun Danu dan bentang alam Bedugul.</p>
+          </article>
+          <article class="r-day r-day-three">
+            <div class="r-day-image">
+              <img
+                decoding="async"
+                src="assets/images/photos/batur.webp"
+                alt="Pemandangan Kintamani untuk hari ketiga"
+              /><span class="r-day-number">Hari 3</span>
+            </div>
+            <h3>Menyapa pagi Kintamani</h3>
+            <p>Tutup perjalanan dengan suasana pegunungan dan danau.</p>
+          </article>
+          <div class="r-plan-actions">
+            <a class="r-btn" href="#planner" data-planner
+              >Pakai rencana ini<img
+                class="icon"
+                src="assets/images/decorations/destinasi-31.png"
+                alt=""
+                aria-hidden="true"
+                draggable="false" /></a
+            ><a class="r-text-link" href="#planner" data-planner
+              >Sesuaikan tempat & waktu<img
+                class="icon"
+                src="assets/images/decorations/destinasi-41.png"
+                alt=""
+                aria-hidden="true"
+                draggable="false"
+            /></a>
+          </div>
+          <div class="r-plan-caption">
+            <img
+              class="icon"
+              src="assets/images/decorations/destinasi-42.png"
+              alt=""
+              aria-hidden="true"
+              draggable="false"
+            />Contoh perjalanan 3 hari di Bali
+          </div>
+        </div>
+      </section>
+      <section
+        class="r-section r-stories"
+        id="cerita"
+        data-main-section="cerita"
+      >
+        <div class="r-wrap">
+          <div class="r-story-heading">
+            <h2>Bali punya<br />banyak cerita.</h2>
+          </div>
+          <p class="r-story-intro">
+            Dari keseharian warga sampai pengalaman para penjelajah. Kenali Bali
+            melalui cerita mereka.
+          </p>
+          <article class="r-main-story">
+            <img
+              decoding="async"
+              src="assets/images/photos/bali-daily-life.webp"
+              alt="Keseharian warga Bali di pasar Denpasar"
+            />
+            <div class="r-story-slip">
+              <span>Kisah keseharian</span>
+              <h3>Pagi yang hidup<br />di sudut Denpasar.</h3>
+              <a
+                class="r-text-link"
+                href="#cerita-denpasar"
+                data-story="denpasar"
+                >Jelajahi kehidupan Bali<img
+                  class="icon"
+                  src="assets/images/decorations/destinasi-43.png"
+                  alt=""
+                  aria-hidden="true"
+                  draggable="false"
+              /></a>
+            </div>
+          </article>
+
+          <div class="r-story-list">
+            <article class="r-small-story">
+              <img
+                decoding="async"
+                src="assets/images/photos/balinese-dance.webp"
+                alt="Tari dan musik tradisional Bali"
+              />
+              <div>
+                <span>Kehidupan & budaya</span>
+                <h3>Di balik gerak<br />dan warna.</h3>
+                <p>Seni dan cerita yang terus hidup.</p>
+              </div>
+            </article>
+            <article class="r-small-story">
+              <img
+                decoding="async"
+                src="assets/images/photos/nusa-penida.jpg"
+                alt="Pantai dan tebing Nusa Penida"
+              />
+              <div>
+                <span>Catatan perjalanan</span>
+                <h3>Pertama kali<br />ke Nusa Penida.</h3>
+                <p>Menemukan pengalaman di seberang pulau.</p>
+              </div>
+            </article>
+          </div>
+          <a
+            class="r-text-link r-story-all"
+            href="#semua-cerita"
+            data-story="all"
+            >Baca cerita lainnya<img
+              class="icon"
+              src="assets/images/decorations/destinasi-45.png"
+              alt=""
+              aria-hidden="true"
+              draggable="false"
+          /></a>
+        </div>
+      </section>
+    </main>
+    <footer class="sakala-footer" aria-label="Informasi dan navigasi SAKALA">
+      <div class="sf-inner">
+        <div class="sf-invitation">
+          <div>
+            <h2>Masih ada Bali<br />yang belum kamu temui.</h2>
+            <p>Mulai dari satu tempat. Pulang dengan banyak cerita.</p>
+            <a class="sf-explore" href="destinasi.html#hero"
+              >Temukan tempatmu <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <img
+            class="sf-mascot"
+            src="assets/images/mascots/mascot_happy.webp"
+            alt="Kinara, maskot SAKALA, menyambut perjalananmu"
+            width="1396"
+            height="1134"
+            loading="lazy"
+          />
+        </div>
+        <div class="sf-directory">
+          <div class="sf-brand">
+            <a href="index.html" aria-label="SAKALA, beranda"
+              ><img
+                src="assets/images/logos/sakala-logo.webp"
+                alt="SAKALA"
+                width="2120"
+                height="740"
+                loading="lazy"
+            /></a>
+            <p>Temukan Bali. Rasakan ceritanya.</p>
+            <span
+              >Alam, budaya, dan kehidupan yang membuat setiap perjalanan
+              berarti.</span
+            >
+          </div>
+          <nav class="sf-links" aria-label="Jelajahi Bali">
+            <h3>Jelajahi</h3>
+            <a href="destinasi.html#hero">Peta destinasi</a
+            ><a href="alam-bali.html">Alam Bali</a
+            ><a href="art.html">Seni & Budaya</a
+            ><a href="taste.html">Kuliner Bali</a>
+          </nav>
+          <nav class="sf-links" aria-label="Inspirasi perjalanan">
+            <h3>Mulai perjalanan</h3>
+            <a href="index.html">Beranda</a
+            ><a href="kehidupan-lokal.html">Kehidupan Lokal</a
+            ><a href="tentang.html">Tentang SAKALA</a>
+            <a href="destinasi.html#rencana">Rencana perjalanan</a
+            ><a href="cerita-bali.html">Cerita dari Bali</a>
+          </nav>
+          <div class="sf-note">
+            <span aria-hidden="true">♡</span>
+            <p>
+              Datang dengan rasa ingin tahu.<br />Pulang dengan rasa hormat.
+            </p>
+            <small>Jaga alamnya, hargai budayanya.</small>
+          </div>
+        </div>
+        <div class="sf-bottom">
+          <p>© 2026 SAKALA</p>
+          <a href="#">Kembali ke atas <span aria-hidden="true">↑</span></a>
+        </div>
+      </div>
+    </footer>
+    <dialog id="content-dialog" aria-labelledby="dialog-title">
+      <button class="dialog-close" aria-label="Tutup dialog">×</button>
+      <div id="dialog-content"></div>
+    </dialog>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="js/destinasi-data.js" defer></script>
+    <script src="js/destinasi.js" defer></script>
+    <script src="js/navigation.js" defer></script>
+  </body>
+</html>

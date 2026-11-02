@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SAKALA &mdash; 05 / Taste of Bali</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            textDarkGreen: "#0F4D3A",
+            textGreen: "#14634A",
+            textMuted: "#4A6E63",
+            primaryGreen: "#1F8A63",
+            lime: "#9ACD5A",
+            blueAccent: "#2169B5",
+            pastelLime: "#DDF3B0",
+            pastelMint: "#CDEFD9",
+            pastelBlue: "#BBD5F0",
+            skyTop: "#B1D3F8",
+            skyBottom: "#E6FAF6",
+            ridgeFar: "#A8C9EC",
+            hillTeal: "#7CCBC3",
+            hillGreen: "#52B58A",
+            landStart: "#B2DE74",
+            landEnd: "#4FAE6C",
+            landOutline: "#DDF5A8",
+            boardBg: "#D1E5FB",
+            cardRestaurant: "#EAF8F0",
+            commentFill: "#F2FFE0",
+            commentBorder: "#BFE58A",
+          },
+          boxShadow: {
+            btnGreen: "0 4px 0 #14634A",
+            btnLime: "0 4px 0 #6FA33A",
+            btnBlue: "0 4px 0 #17518E",
+            dishCard: "0 10px 24px rgba(20, 99, 74, 0.18)",
+            drawer: "0 14px 34px rgba(33, 105, 181, 0.12), 0 4px 10px rgba(15, 77, 58, 0.06)",
+            speechBubble: "0 10px 24px rgba(15, 77, 58, 0.12)",
+          },
+          borderRadius: {
+            dishCard: "22px",
+            drawer: "28px",
+            restaurantCard: "18px",
+            pill: "999px",
+          },
+          fontFamily: {
+            display: ['"Baloo 2"', 'sans-serif'],
+            body: ['"Nunito"', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="preload" as="image" href="assets/eksplorasi/kuliner/background_1.webp">
+  <link rel="preload" as="image" href="assets/eksplorasi/kuliner/peta_bali.webp">
+  <link rel="preload" as="image" href="assets/eksplorasi/kuliner/pin.webp">
+  <link rel="preload" as="image" href="assets/eksplorasi/kuliner/base_genep.webp">
+  <link rel="preload" as="image" href="assets/eksplorasi/kuliner/kunyit.webp">
+  <link rel="preload" as="image" href="assets/eksplorasi/kuliner/cabai.webp">
+  <link rel="preload" as="image" href="assets/eksplorasi/kuliner/bawang_merah.webp">
+  <link rel="preload" as="image" href="assets/eksplorasi/kuliner/bawang_putih.webp">
+  <link rel="preload" as="image" href="assets/eksplorasi/kuliner/jahe.webp">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="css/taste.css">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/navigation.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/eksplorasi-layout.css">
+<link rel="icon" href="assets/images/logos/sakala-flower.webp">
+<link rel="stylesheet" href="css/eksplorasi-responsive.css">
+</head>
+<body data-site-page="taste" class="bg-white" style="background-color: #FFFFFF;">
+<div class="site-navigation">
+      <nav class="pill-nav" aria-label="Navigasi utama">
+        <a class="site-brand" href="index.html" aria-label="SAKALA, beranda"
+          ><img
+            class="site-logo"
+            src="assets/images/logos/sakala-logo.webp"
+            alt="SAKALA"
+            width="2120"
+            height="740"
+        /></a>
+        <ul class="nav-links" id="site-nav-links"><li><a href="index.html">Beranda</a></li><li><a href="destinasi.html#hero">Destinasi</a></li><li><a href="alam-bali.html">Alam Bali</a></li><li><a href="art.html">Seni & Budaya</a></li><li><a href="taste.html" class="pill-active" aria-current="page">Kuliner Bali</a></li><li><a href="kehidupan-lokal.html">Kehidupan Lokal</a></li><li><a href="cerita-bali.html">Cerita Bali</a></li><li><a href="tentang.html">Tentang</a></li></ul>
+        <div class="nav-cta">
+          <a class="btn-orange-pill" href="destinasi.html#rencana">Rencanakan trip</a
+          ><button
+            class="menu-toggle"
+            type="button"
+            aria-controls="site-nav-links"
+            aria-expanded="false"
+            aria-label="Buka menu"
+          >
+            ☰
+          </button>
+        </div>
+      </nav>
+    </div>
+<main>
+
+  <div id="badgeToast" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 hidden items-center gap-3 bg-white/95 backdrop-blur-md px-5 py-3 rounded-full shadow-drawer border-2 border-lime">
+    <div class="w-10 h-10 rounded-full bg-pastelMint flex items-center justify-center p-1">
+      <img src="assets/eksplorasi/badge/badge_pencicip_rasa.webp" alt="Pencicip Rasa" class="w-full h-full object-contain">
+    </div>
+    <div class="flex flex-col">
+      <span class="font-display font-extrabold text-[15px] text-textGreen">
+        Badge Terbuka: Pencicip Rasa!
+      </span>
+      <span class="font-body font-bold text-[12px] text-textMuted">
+        Hidangan berhasil disimpan! Koleksimu bertambah menjadi 4/10.
+      </span>
+    </div>
+    <button onclick="hideToast()" class="ml-2 w-6 h-6 rounded-full bg-pastelMint flex items-center justify-center text-textDarkGreen font-bold text-xs hover:bg-lime transition-colors" aria-label="Tutup">
+      <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+
+  <div id="pageContainer">
+
+  <section id="stage-root" class="taste-section relative w-full overflow-visible" style="min-height: 56rem; background-color: #A8C9EC; background-repeat: no-repeat; z-index: 1; padding-bottom: clamp(60px, 7vw, 110px);">
+
+    <img
+      id="section1Bg"
+      src="assets/eksplorasi/kuliner/background_1.webp"
+      alt="Taste of Bali Background"
+      class="absolute inset-0 w-full h-full object-cover object-bottom select-none pointer-events-none"
+      draggable="false"
+    >
+
+    <div id="stage" class="relative mx-auto overflow-visible" style="width: 90rem; height: 56rem;">
+
+      <div id="headerH1" class="hero-h1 absolute left-[5rem] top-[48px] z-20">
+        <h1 class="font-display font-extrabold text-[3.375rem] text-white leading-tight tracking-tight select-none max-w-[44rem]" style="text-shadow: 0 4px 0 #1263AE, 0 10px 22px rgba(18, 99, 174, 0.45);">
+          Jelajahi Rasa Bali
+        </h1>
+        <p class="font-body font-bold text-[1rem] leading-[1.375rem] text-white max-w-[45rem] mt-[0.625rem] select-none" style="text-shadow: 0 2px 4px rgba(18, 99, 174, 0.7), 0 4px 12px rgba(18, 99, 174, 0.45);">
+          Temukan aneka hidangan khas, cita rasa tradisional, dan tempat makan terbaik dari berbagai penjuru Bali.
+        </p>
+      </div>
+
+      <div id="filterRow" class="hero-filters absolute left-[5rem] top-[11.5rem] flex items-center gap-[0.625rem] z-20 interactive-ui">
+
+        <div class="relative w-[15rem] h-[2.625rem] flex items-center bg-white rounded-full px-[0.875rem] border-2 border-commentBorder shadow-sm">
+          <svg class="w-4 h-4 text-textMuted mr-2 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Cari makanan atau tempat"
+            class="w-full bg-transparent border-none outline-none font-body font-bold text-[0.8125rem] text-textDarkGreen placeholder:text-textMuted/70"
+          >
+          <button id="searchClearBtn" class="hidden text-textMuted hover:text-textDarkGreen text-xs font-bold px-1" aria-label="Hapus pencarian">
+            &times;
+          </button>
+        </div>
+
+        <div class="filter-chips-wrap flex items-center gap-[0.625rem]">
+          <button id="chip-Halal" class="filter-chip h-[2.625rem] px-[1.25rem] rounded-full bg-white text-textDarkGreen border-2 border-commentBorder font-body font-extrabold text-[0.8125rem] shadow-sm hover:border-primaryGreen/60 active:scale-95 transition-all">
+            Halal
+          </button>
+          <button id="chip-Non-halal" class="filter-chip h-[2.625rem] px-[1.25rem] rounded-full bg-white text-textDarkGreen border-2 border-commentBorder font-body font-extrabold text-[0.8125rem] shadow-sm hover:border-primaryGreen/60 active:scale-95 transition-all">
+            Non-halal
+          </button>
+          <button id="chip-Belum-terverifikasi" class="filter-chip h-[2.625rem] px-[1.25rem] rounded-full bg-white text-textDarkGreen border-2 border-commentBorder font-body font-extrabold text-[0.8125rem] shadow-sm hover:border-primaryGreen/60 active:scale-95 transition-all">
+            Belum terverifikasi
+          </button>
+          <div class="relative">
+            <button id="chip-Harga" class="filter-chip h-[2.625rem] px-[1.25rem] rounded-full bg-white text-textDarkGreen border-2 border-commentBorder font-body font-extrabold text-[0.8125rem] shadow-sm hover:border-primaryGreen/60 active:scale-95 transition-all flex items-center gap-1.5">
+              <span>Harga</span>
+              <svg class="w-3.5 h-3.5 text-textMuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div id="dropdown-Harga" class="filter-dropdown-menu hidden"></div>
+          </div>
+          <div class="relative">
+            <button id="chip-Wilayah" class="filter-chip h-[2.625rem] px-[1.25rem] rounded-full bg-white text-textDarkGreen border-2 border-commentBorder font-body font-extrabold text-[0.8125rem] shadow-sm hover:border-primaryGreen/60 active:scale-95 transition-all flex items-center gap-1.5">
+              <span>Wilayah</span>
+              <svg class="w-3.5 h-3.5 text-textMuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div id="dropdown-Wilayah" class="filter-dropdown-menu hidden"></div>
+          </div>
+        </div>
+
+        <button id="resetFiltersBtn" class="inactive" aria-label="Reset Filter">
+          Atur Ulang
+        </button>
+      </div>
+
+      <div id="platterContainer" class="hero-platter absolute top-[17.5rem] h-[14rem] z-10 pointer-events-none" style="display: flex; justify-content: center; align-items: center;">
+        <div id="platterMotionWrapper" class="relative w-full h-full flex items-center justify-center">
+
+          <div id="platterDefaultLayer" class="platter-layer absolute inset-0 flex items-center justify-center" style="opacity: 1;">
+            <img id="platterDefaultImg" src="assets/eksplorasi/kuliner/mainplate.webp" alt="Sajian Utama Kuliner Bali" class="pointer-events-none select-none block max-w-full max-h-full object-contain" draggable="false">
+          </div>
+
+          <div id="platterDishLayer" class="platter-layer absolute inset-0 flex items-center justify-center" style="opacity: 0;">
+            <img id="platterDishImg" src="assets/eksplorasi/kuliner/satelilit_animasi.webp" alt="Platter Hidangan" class="pointer-events-none select-none block max-w-full max-h-full object-contain" draggable="false">
+          </div>
+        </div>
+      </div>
+
+      <div id="heroRailContainer" class="hero-rail-container absolute left-[21rem] top-[32rem] w-[48rem] flex items-center gap-[12px] z-20 select-none">
+        <button id="railLeftBtn" class="rail-nav-btn shrink-0 interactive-ui" aria-label="Sebelumnya" title="Sebelumnya" type="button" style="flex: none;">
+          <svg class="w-5 h-5 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 5l-7 7 7 7"/>
+          </svg>
+        </button>
+
+        <div id="dishCardsRail" class="dish-cards-viewport flex-1 min-w-0" style="overflow-x: clip; overflow-y: visible; padding-top: 28px; padding-bottom: 40px; padding-inline: 48px; margin-inline: -48px; mask-image: linear-gradient(to right, transparent 0, #000 48px, #000 calc(100% - 48px), transparent 100%); -webkit-mask-image: linear-gradient(to right, transparent 0, #000 48px, #000 calc(100% - 48px), transparent 100%); border: none; outline: none; outline-width: 0; box-shadow: none; background: none;">
+          <div id="dishCardsTrack" class="dish-cards-track flex items-center gap-[18px]" style="width: max-content; will-change: transform;">
+
+          </div>
+        </div>
+
+        <button id="railRightBtn" class="rail-nav-btn shrink-0 interactive-ui" aria-label="Berikutnya" title="Berikutnya" type="button" style="flex: none;">
+          <svg class="w-5 h-5 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+
+      <aside id="restaurantDrawer" class="absolute left-[71rem] top-[7.375rem] w-[16.875rem] h-[44rem] rounded-[1.75rem] bg-white/95 backdrop-blur-sm p-[1.125rem] shadow-xl border border-hillTeal/30 flex flex-col justify-between z-30 interactive-ui overflow-hidden">
+        <div class="flex items-center justify-between pb-[0.625rem] border-b border-commentBorder/60">
+          <div>
+            <h3 class="font-display font-extrabold text-[1.125rem] text-textDarkGreen leading-tight">
+              Tempat makan terdekat
+            </h3>
+            <p id="drawerDishContextPill" class="font-body font-bold text-[0.6875rem] text-textMuted mt-[2px]">
+              Menampilkan untuk: <span id="drawerDishContextName" class="text-primaryGreen font-extrabold">Semua</span>
+            </p>
+          </div>
+        </div>
+
+        <div id="restaurantCardsList" class="flex-1 overflow-y-auto py-[0.625rem] flex flex-col gap-[0.625rem] pr-[2px]">
+
+        </div>
+
+        <div class="pt-[0.5rem] border-t border-commentBorder/60 text-center">
+          <span class="font-body font-bold text-[0.6875rem] text-textMuted">
+            Rekomendasi terverifikasi oleh tim SAKALA
+          </span>
+        </div>
+      </aside>
+
+      <div id="mascotBubble" class="absolute left-[3.2rem] top-[calc(27.75rem+24px)] bg-white rounded-[1.125rem] p-[0.75rem_1rem] shadow-lg border border-commentBorder max-w-[13.75rem] z-30 pointer-events-none transition-all duration-300">
+        <p id="mascotBubbleText" class="font-body font-bold text-[0.75rem] leading-[1.0625rem] text-textDarkGreen">
+          Yuk cobain kuliner Bali yang kaya bumbu base genep!
+        </p>
+        <div class="absolute -bottom-[0.5rem] left-[1.5rem] w-0 h-0 border-l-[0.5rem] border-l-transparent border-r-[0.5rem] border-r-transparent border-t-[0.5rem] border-t-white"></div>
+      </div>
+
+      <div id="mascotContainer" class="mascot-bobbing absolute left-[0.7rem] top-[calc(31.75rem+24px)] w-[18.125rem] z-30 select-none pointer-events-none drop-shadow-xl">
+        <img src="assets/eksplorasi/mascot/mascot_eat.webp" alt="Manuk Mascot" class="w-full h-auto object-contain">
+      </div>
+    </div>
+
+    <svg
+      id="section1WaveSvg"
+      style="position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: clamp(60px, 7vw, 110px); display: block; pointer-events: none; z-index: 2; overflow: visible;"
+      viewBox="0 0 1440 100"
+      preserveAspectRatio="none"
+      aria-hidden="true"
+    >
+      <path
+        id="waveSecondaryLine"
+        d="M0,52 C240,-8 480,92 720,47 C960,2 1200,87 1440,32"
+        fill="none"
+        stroke="#2F9E3B"
+        stroke-width="2"
+        stroke-linecap="round"
+        opacity="0.5"
+        vector-effect="non-scaling-stroke"
+      ></path>
+      <path
+        id="waveDecorativeLine"
+        d="M0,60 C240,0 480,100 720,55 C960,10 1200,95 1440,40"
+        fill="none"
+        stroke="#7CCB36"
+        stroke-width="3"
+        stroke-linecap="round"
+        opacity="0.9"
+        vector-effect="non-scaling-stroke"
+      ></path>
+      <path d="M0,60 C240,0 480,100 720,55 C960,10 1200,95 1440,40 L1440,100 L0,100 Z" fill="#FFFFFF"></path>
+    </svg>
+  </section>
+
+  <section id="section-5-2-wrapper" class="taste-section relative w-full" style="min-height: auto; background-color: #FFFFFF; z-index: 2; margin-top: 0; padding-top: 0; padding-bottom: 0; overflow-x: clip; overflow-y: visible;">
+
+    <div id="section-5-2-frame" class="relative mx-auto overflow-visible z-10" style="width: 90rem; min-height: 52rem; height: auto; padding-bottom: 150px;">
+
+      <div class="section-5-2-header absolute left-0 right-0 top-[3.5rem] text-center z-20 pointer-events-none select-none px-6">
+        <h2 class="font-display font-extrabold text-[2.75rem] leading-[2.875rem] text-[#0F4D3A] m-0">
+          Kisah di Balik Cita Rasa
+        </h2>
+        <p class="font-body font-bold text-[1.0625rem] leading-[1.5rem] text-[#14634A] max-w-[53.75rem] mx-auto mt-[1rem]">
+          Setiap bumbu punya cerita, setiap suapan punya warisan.
+        </p>
+      </div>
+
+      <div id="story" class="story-grid relative flex justify-between items-start" style="position: relative; left: 6.875rem; top: 10.75rem; width: 78.125rem; min-height: 40rem; height: auto; z-index: 10;">
+
+        <div class="story-left story-left-col relative flex flex-col z-20" style="position: relative; align-self: start; width: 38.75rem;">
+
+          <svg class="story-leaf-big" viewBox="0 0 173 576" width="173" height="576" style="position: absolute; width: 173px; height: 576px; left: -210px; bottom: -115px; transform: rotate(5deg); transform-origin: bottom center; z-index: 1; pointer-events: none;" fill="none" aria-hidden="true">
+            <path d="M 86.5 0 C 145 100 173 259 86.5 576 C 0 259 28 100 86.5 0 Z" fill="#E3F3D0" fill-opacity="0.7"/>
+            <path d="M 70 576 Q 95 259 86.5 0" fill="none" stroke="#CFE8B5" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+
+          <svg class="story-leaf-small" viewBox="0 0 100 336" width="100" height="336" style="position: absolute; width: 100px; height: 336px; left: -206px; bottom: -91px; transform: rotate(-4deg); transform-origin: bottom center; z-index: 0; pointer-events: none;" fill="none" aria-hidden="true">
+            <path d="M 50 0 C 85 60 100 151 50 336 C 0 151 15 60 50 0 Z" fill="#EDF9E4" fill-opacity="0.65"/>
+            <path d="M 42 336 Q 56 151 50 0" fill="none" stroke="#D7EDC5" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+
+          <div id="storyTextBlock" class="story-text-container w-[37.5rem]">
+            <h1 id="storyDishTitle" class="font-display font-extrabold text-[4.5rem] leading-[4.5rem] text-[#0F4D3A] whitespace-nowrap">
+              Ayam Betutu
+            </h1>
+            <p id="storyParagraph1" class="font-body font-semibold text-[1.3125rem] leading-[1.9375rem] text-[#0F4D3A]">
+              <strong>Ayam berbumbu base genep</strong>, dimasak perlahan sampai meresap. Dari Gilimanuk, Jembrana, sering hadir di upacara ketika keluarga <strong>berkumpul</strong>.
+            </p>
+            <p id="storyParagraph2" class="font-body font-semibold text-[1.125rem] leading-[1.625rem] text-[#14634A]">
+              Bumbu diulek halus, dibungkus daun pisang, lalu dimasak berjam-jam.
+            </p>
+            <p id="storyParagraph3" class="font-body font-semibold text-[1.125rem] leading-[1.625rem] text-[#14634A]" style="display: none;"></p>
+          </div>
+
+          <div id="storyPillRowWrapper" class="relative mt-[1.125rem] w-[38.75rem] h-[4.5rem] flex items-center gap-[12px] select-none">
+            <button id="storyPillPrevBtn" class="story-pill-nav-btn shrink-0 w-[2.75rem] h-[2.75rem] rounded-full bg-[#2F9E3B] text-white flex items-center justify-center shadow-[0_4px_0_#1B6E2A] active:translate-y-[1px] disabled:opacity-30 disabled:cursor-not-allowed z-20 interactive-ui" aria-label="Geser ke kiri" type="button" style="flex: none;">
+              <svg class="w-4 h-4 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 5l-7 7 7 7"/>
+              </svg>
+            </button>
+
+            <div id="storyPillTrackContainer" class="story-pill-viewport flex-1 min-w-0" style="overflow-x: clip; overflow-y: visible; padding-top: 12px; padding-bottom: 12px; padding-inline: 48px; margin-inline: -48px; mask-image: linear-gradient(to right, transparent 0, #000 48px, #000 calc(100% - 48px), transparent 100%); -webkit-mask-image: linear-gradient(to right, transparent 0, #000 48px, #000 calc(100% - 48px), transparent 100%); border: none; outline: none; outline-width: 0; box-shadow: none; background: none;">
+              <div id="storyPillScrollTrack" class="story-pill-scroll-track flex items-center gap-[10px]" style="width: max-content; will-change: transform;">
+
+              </div>
+            </div>
+
+            <button id="storyPillNextBtn" class="story-pill-nav-btn shrink-0 w-[2.75rem] h-[2.75rem] rounded-full bg-[#2F9E3B] text-white flex items-center justify-center shadow-[0_4px_0_#1B6E2A] active:translate-y-[1px] disabled:opacity-30 disabled:cursor-not-allowed z-20 interactive-ui" aria-label="Geser ke kanan" type="button" style="flex: none;">
+              <svg class="w-4 h-4 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="w-[37.5rem] h-[2px] bg-[#E2EFD0] mt-[1rem]"></div>
+
+          <div class="mt-[1rem]">
+            <span id="storyCounter" class="font-display font-extrabold text-[1.125rem] tracking-[2px] text-[#1F8A63] uppercase select-none">
+              CERITA 1 / 9
+            </span>
+          </div>
+
+          <div class="mt-[1rem]">
+            <button id="storyFindPlacesBtn" class="btn-chunky interactive-ui h-[3.375rem] px-[2rem] rounded-full bg-[#2169B5] text-[#F2FFE0] font-display font-extrabold text-[1.25rem] shadow-[0_4px_0_#17518E] flex items-center gap-2 hover:-translate-y-[2px] active:translate-y-[2px]" type="button">
+              <span>Cari tempat makannya</span>
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="story-right story-right-col relative z-20" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: auto; gap: 16px; width: 36.875rem;">
+
+          <div id="storyTagsArea" class="story-tags-area story-tag-cluster story-tags-container select-none" style="grid-column: 1; grid-row: 1; min-height: 170px; display: flex; flex-direction: column; gap: 10px; align-items: flex-start; justify-content: flex-start; padding: 4px 0; pointer-events: none;">
+            <span id="storyChip-0" class="story-floating-chip story-tag-pill story-tag-pill-0 bg-white border-2 border-[#BFE58A] text-[#0F4D3A] shadow-sm font-display font-extrabold rounded-full whitespace-nowrap" style="margin-left: 8px; transform: rotate(-6deg); transform-origin: 0% 50%; display: inline-flex; align-items: center;">
+              Gilimanuk
+            </span>
+            <span id="storyChip-1" class="story-floating-chip story-tag-pill story-tag-pill-1 bg-[#1F8A63] text-[#F2FFE0] shadow-sm font-display font-extrabold rounded-full whitespace-nowrap" style="margin-left: clamp(70px, 8vw, 120px); transform: rotate(5deg); transform-origin: 100% 50%; display: inline-flex; align-items: center;">
+              Jembrana
+            </span>
+            <span id="storyChip-2" class="story-floating-chip story-tag-pill story-tag-pill-2 bg-white border-2 border-[#BFE58A] text-[#0F4D3A] shadow-sm font-display font-extrabold rounded-full whitespace-nowrap" style="margin-left: 8px; transform: rotate(-4deg); transform-origin: 0% 50%; display: inline-flex; align-items: center;">
+              Bali barat
+            </span>
+            <span id="storyChip-3" class="story-floating-chip story-tag-pill story-tag-pill-3 bg-[#9ACD5A] text-[#0F4D3A] shadow-sm font-display font-extrabold rounded-full whitespace-nowrap" style="margin-left: clamp(70px, 8vw, 120px); transform: rotate(6deg); transform-origin: 0% 50%; display: inline-flex; align-items: center;">
+              Base genep
+            </span>
+          </div>
+
+          <div class="story-bento-tile story-bento-tile-asal rounded-[1.5rem] bg-[#C7EA85] p-[1.25rem_1.375rem] shadow-[0_8px_24px_rgba(15,77,58,0.06)] relative overflow-hidden z-20 flex flex-col" style="grid-column: 2; grid-row: 1; min-height: 170px;">
+            <span class="font-display font-extrabold text-[2rem] leading-none text-[#0F4D3A] block mb-[0.5rem]">
+              Asal
+            </span>
+            <p id="storyTextAsal" class="font-body font-bold text-[1.0625rem] leading-[1.4375rem] text-[#0F4D3A] relative z-10" style="padding-bottom: 54px;">
+              Gilimanuk, Kabupaten Jembrana, Bali barat.
+            </p>
+            <svg class="story-asal-landscape-svg absolute right-0 bottom-0 pointer-events-none" width="168" height="74" viewBox="0 0 168 74" fill="none">
+              <path d="M0 74 C 40 45 100 40 168 55 V74 H0 Z" fill="#7CBD2E"></path>
+              <path d="M40 74 C 90 55 130 52 168 62 V74 H40 Z" fill="#589B1E"></path>
+              <path d="M110 50 L115 35 L120 50 Z" fill="#256B1E"></path>
+              <path d="M120 52 L126 30 L132 52 Z" fill="#1C5B17"></path>
+              <path d="M130 54 L135 38 L140 54 Z" fill="#256B1E"></path>
+            </svg>
+          </div>
+
+          <div class="story-bento-tile story-bento-tile-bumbu rounded-[1.5rem] bg-[#1F8A63] text-white p-[1.25rem_1.375rem] shadow-[0_8px_24px_rgba(15,77,58,0.06)] relative overflow-hidden z-20 flex flex-col" style="grid-column: 1; grid-row: 2; min-height: 170px;">
+            <span id="storyLabelBumbu" class="font-display font-extrabold text-[2.25rem] leading-none block mb-[0.625rem]">
+              Bumbu
+            </span>
+            <p id="storyTextBumbu" class="font-body font-bold text-[1.125rem] leading-[1.5625rem] text-[#F2FFE0] relative z-10" style="padding-bottom: 24px;">
+              Base genep: kunyit, lengkuas, bawang, cabai, dan rempah lain.
+            </p>
+            <svg class="absolute right-[0.625rem] bottom-[0.5rem] pointer-events-none" width="88" height="96" viewBox="0 0 88 96" fill="none">
+              <path d="M15 90 C 15 45 45 15 80 10 C 80 55 50 85 15 90 Z" fill="#2AA876" opacity="0.8"></path>
+              <path d="M15 90 Q 45 50 80 10" stroke="#8FE2B8" stroke-width="3" fill="none" opacity="0.6"></path>
+            </svg>
+          </div>
+
+          <div class="story-bento-tile story-bento-tile-makna rounded-[1.5rem] bg-[#17775A] text-white p-[1.25rem_1.375rem] shadow-[0_8px_24px_rgba(15,77,58,0.06)] relative overflow-hidden z-20 flex flex-col" style="grid-column: 2; grid-row: 2; min-height: 170px;">
+            <span class="font-display font-extrabold text-[2.25rem] leading-none block mb-[0.625rem]">
+              Makna
+            </span>
+            <p id="storyTextMakna" class="font-body font-bold text-[1.125rem] leading-[1.5625rem] text-[#F2FFE0] relative z-10" style="padding-bottom: 24px;">
+              Kesabaran dan kebersamaan, dimasak lama dan disantap bersama.
+            </p>
+            <svg class="absolute right-[0.625rem] bottom-[0.5rem] pointer-events-none" width="88" height="96" viewBox="0 0 88 96" fill="none">
+              <path d="M15 90 C 15 45 45 15 80 10 C 80 55 50 85 15 90 Z" fill="#1F946F" opacity="0.8"></path>
+              <path d="M15 90 Q 45 50 80 10" stroke="#8FE2B8" stroke-width="3" fill="none" opacity="0.6"></path>
+            </svg>
+          </div>
+
+          <div id="storyPhotoCard" class="story-photo-card rounded-[1.75rem] overflow-hidden shadow-[0_10px_30px_rgba(15,77,58,0.12)] relative z-20" style="grid-column: 1 / -1; grid-row: 3; width: 100%; height: 184px;">
+            <img id="storyPhotoImg" src="assets/library/kuliner/ayambetutu.jpg" alt="Foto Ayam Betutu khas Bali" class="w-full h-full object-cover select-none">
+            <div id="storyPhotoSkeleton" class="absolute inset-0 bg-[#E2EFD0] skeleton-shimmer" style="display: none;"></div>
+            <div class="story-caption-pill absolute left-[1.125rem] bottom-[1.125rem] bg-white/95 backdrop-blur-sm px-[1rem] py-[0.375rem] rounded-full shadow-md z-20">
+              <span id="storyCaptionPill" class="font-display font-extrabold text-[1.125rem] text-[#0F4D3A]">
+                Ayam Betutu · Gilimanuk
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-5-3-wrapper" class="taste-section relative w-full overflow-visible" style="min-height: auto; background-color: #FFFFFF; z-index: 3; padding-top: 52px; padding-bottom: clamp(74px, calc(9vw - 24px), 108px);">
+
+    <div id="section-5-3-frame" class="relative mx-auto overflow-visible" style="width: 90rem; height: 40.125rem; background: #FFFFFF;">
+
+      <div id="spiceMascot" class="absolute left-[3.6875rem] top-[0.9375rem] w-[9.28125rem] h-[8.15625rem] z-20 pointer-events-none select-none">
+        <img src="assets/eksplorasi/mascot/mascot_eat.webp" alt="Manuk Mascot" class="w-full h-full object-contain">
+      </div>
+
+      <div class="section-5-3-header absolute left-0 right-0 top-[1.5rem] flex flex-col items-center z-20 pointer-events-none select-none px-6">
+        <h2 class="font-display font-extrabold text-[3.2rem] leading-[1.1] text-[#0F4D3A] m-0">
+          Rahasia Bumbu Bali
+        </h2>
+        <p class="font-body font-bold text-[0.95rem] leading-[1.35] text-[#14634A] mt-[8px] mb-0 max-w-[45rem] text-center">
+          Pilih satu bahan untuk melihat fungsi, aroma, dan hidangan yang memakainya.
+        </p>
+      </div>
+
+      <div id="spiceCarouselWrapper" class="absolute left-[7.875rem] top-[8.25rem] w-[74.25rem] flex items-center gap-[11px] z-20 select-none">
+
+        <button id="spicePrevArrowBtn" class="btn-chunky interactive-ui shrink-0 w-[3.15rem] h-[3.15rem] rounded-full bg-[#FFB04A] text-white shadow-[0_0_0_10px_rgba(255,176,74,0.25)] flex items-center justify-center hover:shadow-[0_0_0_16px_rgba(255,176,74,0.4)] active:scale-95 transition-all z-30" aria-label="Bumbu sebelumnya" type="button" style="flex: none;">
+          <svg class="w-[21.6px] h-[21.6px] pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M11 18l-6-6 6-6"></path>
+          </svg>
+        </button>
+
+        <div id="spiceTrackViewport" class="flex-1 min-w-0 select-none cursor-grab" style="overflow-x: clip; overflow-y: visible; box-sizing: border-box; height: 750px; padding-top: 204px; padding-bottom: 204px; margin-top: -204px; margin-bottom: -204px; padding-inline: 48px; margin-inline: -48px; mask-image: linear-gradient(to right, transparent 0, #000 48px, #000 calc(100% - 48px), transparent 100%); -webkit-mask-image: linear-gradient(to right, transparent 0, #000 48px, #000 calc(100% - 48px), transparent 100%); border: none; outline: none; outline-width: 0; box-shadow: none; background: none;">
+          <div id="spiceRowContainer" class="flex items-center gap-[22px]" style="width: max-content; will-change: transform; height: 100%;">
+
+          </div>
+        </div>
+
+        <button id="spiceNextArrowBtn" class="btn-chunky interactive-ui shrink-0 w-[3.15rem] h-[3.15rem] rounded-full bg-[#FFB04A] text-white shadow-[0_0_0_10px_rgba(255,176,74,0.25)] flex items-center justify-center hover:shadow-[0_0_0_16px_rgba(255,176,74,0.4)] active:scale-95 transition-all z-30" aria-label="Bumbu berikutnya" type="button" style="flex: none;">
+          <svg class="w-[21.6px] h-[21.6px] pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 6l6 6-6 6"></path>
+          </svg>
+        </button>
+      </div>
+
+<div class="spice-info-grid">
+
+  <div class="spice-info-col spice-info-col-1 absolute left-[10.5rem] top-[34.5rem] w-[13.5rem] border-t-2 border-[#BFE58A] pt-[0.84375rem] z-20 pointer-events-none select-none">
+    <span class="font-display font-bold text-[1.0125rem] tracking-[1.8px] text-[#1F8A63] uppercase block">
+      FUNGSI
+    </span>
+    <p id="spiceInfoFungsi" class="font-body font-bold text-[1.125rem] leading-[1.4625rem] text-[#0F4D3A] mt-[0.45rem]">
+      Memberi warna, aroma, dan rasa kompleks.
+    </p>
+  </div>
+
+  <div class="spice-info-col spice-info-col-2 absolute left-[27.375rem] top-[34.5rem] w-[13.5rem] border-t-2 border-[#BFE58A] pt-[0.84375rem] z-20 pointer-events-none select-none">
+    <span class="font-display font-bold text-[1.0125rem] tracking-[1.8px] text-[#1F8A63] uppercase block">
+      AROMA
+    </span>
+    <p id="spiceInfoAroma" class="font-body font-bold text-[1.125rem] leading-[1.4625rem] text-[#0F4D3A] mt-[0.45rem]">
+      Hangat, segar, dan khas pulau tropis.
+    </p>
+  </div>
+
+  <div class="spice-info-col spice-info-col-3 absolute left-[44.25rem] top-[34.5rem] w-[13.5rem] border-t-2 border-[#BFE58A] pt-[0.84375rem] z-20 pointer-events-none select-none">
+    <span class="font-display font-bold text-[1.0125rem] tracking-[1.8px] text-[#1F8A63] uppercase block">
+      KEUNIKAN
+    </span>
+    <p id="spiceInfoKeunikan" class="font-body font-bold text-[1.125rem] leading-[1.4625rem] text-[#0F4D3A] mt-[0.45rem]">
+      Banyak tumbuh di Bali, berkualitas tinggi.
+    </p>
+  </div>
+
+  <div class="spice-info-col spice-info-col-4 absolute left-[61.125rem] top-[34.5rem] w-[13.5rem] border-t-2 border-[#BFE58A] pt-[0.84375rem] z-20 pointer-events-none select-none">
+    <span class="font-display font-bold text-[1.0125rem] tracking-[1.8px] text-[#1F8A63] uppercase block">
+      KOMBINASI
+    </span>
+    <p id="spiceInfoKombinasi" class="font-body font-bold text-[1.125rem] leading-[1.4625rem] text-[#0F4D3A] mt-[0.45rem]">
+      Kunci kelezatan Ayam Betutu, Sate Lilit, Nasi Campur.
+    </p>
+  </div>
+</div>
+
+  </section>
+
+<section id="section-5-4-wrapper" class="section-scaler-wrapper" style="position: relative; z-index: 4;">
+    <div id="section-5-4-scaler" class="section-scaler">
+      <div id="section-5-4-frame" class="section-frame">
+
+        <div
+          id="mapClipWrapper"
+          class="absolute left-[117px] top-[22px] w-[1206px] h-[666px] rounded-[43px] overflow-hidden shadow-[0_24px_44px_rgba(8,50,100,0.18)] z-10"
+          style="background-color: #5BA8E3;"
+        >
+
+          <div
+            id="mapLayer"
+            class="absolute left-0 top-0 w-[1279.3px] h-[666px] will-change-transform"
+            style="transform-origin: 30% 50%; opacity: 0; transform: scale(1.05);"
+          >
+
+            <img
+              id="mapBgImg"
+              src="assets/eksplorasi/kuliner/peta_bali.webp"
+              alt="Peta Rasa Pulau Bali"
+              class="w-full h-full block object-cover select-none pointer-events-none"
+              draggable="false"
+            >
+
+            <div id="mapPinsContainer" class="absolute inset-0 pointer-events-none">
+
+            </div>
+          </div>
+
+          <div class="map-header-overlay absolute left-[54px] top-[70px] z-20 pointer-events-none select-none">
+            <h2 class="font-display font-extrabold text-[42px] leading-[44px] text-white drop-shadow-[0_3px_0_rgba(10,70,140,0.38)] m-0">
+              Peta Rasa Pulau Bali
+            </h2>
+            <p class="font-body font-bold text-[16px] leading-[22px] text-white drop-shadow-[0_2px_0_rgba(10,70,140,0.35)] mt-[8px] mb-0 max-w-[650px]">
+              Pilih pin di peta, lalu temukan kuliner khas dan tempat makan di sekitarnya.
+            </p>
+          </div>
+
+          <aside
+            id="mapRightSheet"
+            class="absolute left-[801px] top-[18px] w-[387px] h-[630px] rounded-[29px] bg-white p-[25px_27px_22px] shadow-[0_24px_44px_rgba(8,50,100,0.22)] z-30 flex flex-col justify-between interactive-ui"
+          >
+
+            <div id="mapSheetContent" class="flex-1 flex flex-col min-h-0">
+
+              <div class="shrink-0 pb-[8px]">
+                <h3 id="mapSheetRegionName" class="font-display font-extrabold text-[clamp(1.9rem,2.7vw,2.6rem)] leading-tight text-[#0F4D3A] tracking-tight mb-[6px]">
+                  Ubud
+                </h3>
+                <p id="mapSheetRegionNote" class="font-body font-bold text-[16px] text-[#1F8A63] mt-0 leading-snug">
+                  Kabupaten Gianyar. Pusat seni dan dapur tradisional Bali.
+                </p>
+              </div>
+
+              <div class="shrink-0 py-[12px] border-t border-[#EAF2D8]">
+                <span class="font-display font-bold text-[16px] tracking-[1.8px] text-[#1F8A63] uppercase block mb-[9px]">
+                  KULINER KHAS
+                </span>
+                <div id="mapSheetDishesList" class="flex flex-col gap-[10px]">
+
+                </div>
+              </div>
+
+              <div class="flex-1 min-h-0 flex flex-col py-[12px] border-t border-[#EAF2D8]">
+                <span class="font-display font-bold text-[16px] tracking-[1.8px] text-[#2169B5] uppercase block mb-[9px]">
+                  TEMPAT MAKAN
+                </span>
+                <div id="mapSheetPlacesList" class="flex flex-col gap-[12px] overflow-y-auto pr-[2px]">
+
+                </div>
+              </div>
+            </div>
+
+            <div class="shrink-0 pt-[12px]">
+              <button
+                id="mapSheetViewAllBtn"
+                class="btn-chunky interactive-ui w-full h-[49px] rounded-full bg-[#1F8A63] text-[#F2FFE0] font-display font-extrabold text-[20px] shadow-[0_4.5px_0_#14634A] flex items-center justify-center transition-transform hover:-translate-y-[2px] active:translate-y-[2px]"
+                type="button"
+              >
+                Lihat semua di daftar
+              </button>
+            </div>
+          </aside>
+
+        </div>
+
+        <div id="pinsDebugToolbar" class="hidden absolute top-[10px] left-[50px] z-50 bg-black/85 text-white px-4 py-2 rounded-xl flex items-center gap-4 font-mono text-sm shadow-xl">
+          <span class="text-[#9ACD5A] font-bold flex items-center gap-1.5"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>PIN EDITOR MODE</span>
+          <span id="pinsDebugInfo" class="text-xs text-white/80">Drag any pin to reposition</span>
+          <button id="pinsDebugCopyBtn" type="button" class="bg-[#1F8A63] hover:bg-[#25a577] text-white font-bold px-3 py-1 rounded text-xs">
+            Copy JSON
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  </div>
+
+  <script defer src="js/taste.bundle.js"></script>
+
+</main>
+<footer class="sakala-footer" aria-label="Informasi dan navigasi SAKALA">
+      <div class="sf-inner">
+        <div class="sf-invitation">
+          <div>
+            <h2>Masih ada Bali<br />yang belum kamu temui.</h2>
+            <p>Mulai dari satu tempat. Pulang dengan banyak cerita.</p>
+            <a class="sf-explore" href="destinasi.html#hero"
+              >Temukan tempatmu <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <img
+            class="sf-mascot"
+            src="assets/images/mascots/mascot_happy.webp"
+            alt="Kinara, maskot SAKALA, menyambut perjalananmu"
+            width="1396"
+            height="1134"
+            loading="lazy"
+          />
+        </div>
+        <div class="sf-directory">
+          <div class="sf-brand">
+            <a href="index.html" aria-label="SAKALA, beranda"
+              ><img
+                src="assets/images/logos/sakala-logo.webp"
+                alt="SAKALA"
+                width="2120"
+                height="740"
+                loading="lazy"
+            /></a>
+            <p>Temukan Bali. Rasakan ceritanya.</p>
+            <span>Alam, budaya, dan kehidupan yang membuat setiap perjalanan berarti.</span>
+          </div>
+          <nav class="sf-links" aria-label="Jelajahi Bali">
+            <h3>Jelajahi</h3>
+            <a href="destinasi.html#hero">Peta destinasi</a
+            ><a href="alam-bali.html">Alam Bali</a
+            ><a href="art.html">Seni & Budaya</a
+            ><a href="taste.html">Kuliner Bali</a>
+          </nav>
+          <nav class="sf-links" aria-label="Inspirasi perjalanan">
+            <h3>Mulai perjalanan</h3><a href="index.html">Beranda</a><a href="kehidupan-lokal.html">Kehidupan Lokal</a><a href="tentang.html">Tentang SAKALA</a>
+            <a href="destinasi.html#rencana">Rencana perjalanan</a
+            ><a href="cerita-bali.html">Cerita dari Bali</a
+            >
+          </nav>
+          <div class="sf-note">
+            <span aria-hidden="true">♡</span>
+            <p>Datang dengan rasa ingin tahu.<br />Pulang dengan rasa hormat.</p>
+            <small>Jaga alamnya, hargai budayanya.</small>
+          </div>
+        </div>
+        <div class="sf-bottom">
+          <p>© 2026 SAKALA</p>
+          <a href="#">Kembali ke atas <span aria-hidden="true">↑</span></a>
+        </div>
+      </div>
+    </footer>
+<script src="js/navigation.js" defer></script>
+<script src="js/eksplorasi-responsive.js" defer></script>
+</body>
+</html>
+

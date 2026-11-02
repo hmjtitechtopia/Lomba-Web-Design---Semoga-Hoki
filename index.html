@@ -1,0 +1,747 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SAKALA - Menemukan Jiwa Bali | Beranda</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,700..900,0..100;1,9..144,700..900,0..100&family=Playfair+Display:ital,wght@0,600..900;1,600..900&family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css?v=8.0">
+  <link rel="stylesheet" href="css/beranda.css?v=21.0">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/navigation.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/editorial-layout.css">
+<link rel="icon" href="assets/images/logos/sakala-flower.webp">
+</head>
+<body data-site-page="beranda">
+
+  <canvas id="confetti-canvas"></canvas>
+  <div id="camera-flash"></div>
+
+  <div class="site-navigation">
+      <nav class="pill-nav" aria-label="Navigasi utama">
+        <a class="site-brand" href="index.html" aria-label="SAKALA, beranda"
+          ><img
+            class="site-logo"
+            src="assets/images/logos/sakala-logo.webp"
+            alt="SAKALA"
+            width="2120"
+            height="740"
+        /></a>
+        <ul class="nav-links" id="site-nav-links"><li><a href="index.html" class="pill-active" aria-current="page">Beranda</a></li><li><a href="destinasi.html#hero">Destinasi</a></li><li><a href="alam-bali.html">Alam Bali</a></li><li><a href="art.html">Seni & Budaya</a></li><li><a href="taste.html">Kuliner Bali</a></li><li><a href="kehidupan-lokal.html">Kehidupan Lokal</a></li><li><a href="cerita-bali.html">Cerita Bali</a></li><li><a href="tentang.html">Tentang</a></li></ul>
+        <div class="nav-cta">
+          <a class="btn-orange-pill" href="destinasi.html#rencana">Rencanakan trip</a
+          ><button
+            class="menu-toggle"
+            type="button"
+            aria-controls="site-nav-links"
+            aria-expanded="false"
+            aria-label="Buka menu"
+          >
+            ☰
+          </button>
+        </div>
+      </nav>
+    </div>
+
+  <header class="hero-cultural-home" id="hero">
+
+    <div class="hero-cultural-bg" style="background-image: url('assets/editorial/home/hero-beranda-panorama.webp?v=18.0');"></div>
+    <div class="hero-cultural-overlay"></div>
+
+    <div class="hero-cultural-container">
+
+      <div class="hero-headline-box reveal-on-scroll fade-down">
+        <h1 class="hero-main-title">
+          Eksplorasi Menginspirasi &amp;<br>
+          <span class="hero-brush-wrap">
+            Penuh Keajaiban
+            <svg class="hero-brush-svg" viewBox="0 0 380 22" fill="none" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="heroOrangeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#FF764C"/>
+                  <stop offset="100%" stop-color="#FF5429"/>
+                </linearGradient>
+              </defs>
+              <path d="M4 14C70 4 310 3 376 13C310 20 70 20 4 14Z" fill="url(#heroOrangeGrad)"/>
+            </svg>
+          </span>
+        </h1>
+        <p class="hero-main-subtitle">
+          Temukan ketenangan dan kehangatan budaya Bali bersama SAKALA, menjadikan setiap perjalanan pengalaman yang bermakna.
+        </p>
+      </div>
+
+      <div class="hero-island-stage reveal-on-scroll pop-in" id="hero-island-area">
+        <img src="assets/editorial/home/pulau-home.webp?v=1.0" alt="Pulau Pura SAKALA Bali" class="hero-island-img" width="1452" height="861">
+      </div>
+
+      <div class="hero-search-capsule reveal-on-scroll pop-in">
+
+        <div class="capsule-field" onclick="scrollToSection('peta-jalur')" title="Klik untuk melihat tempat wisata Bali">
+          <span class="cap-icon cap-icon-pin">📍</span>
+          <div class="cap-meta">
+            <span class="cap-label">Tempat</span>
+            <span class="cap-value">Bali, Indonesia <span class="cap-chevron">&#9662;</span></span>
+          </div>
+        </div>
+
+        <div class="capsule-divider" aria-hidden="true"></div>
+
+        <div class="capsule-field" title="Hari & Tanggal Kunjungan Anda">
+          <span class="cap-icon cap-icon-cal">📅</span>
+          <div class="cap-meta">
+            <span class="cap-label">Hari & Tanggal</span>
+            <span class="cap-value" id="hero-capsule-date">Rabu, 28 Okt 2026 <span class="cap-chevron">&#9662;</span></span>
+          </div>
+        </div>
+
+        <div class="capsule-divider" aria-hidden="true"></div>
+
+        <div class="capsule-field" onclick="scrollToSection('begin-culture')" title="Klik untuk menjelajahi kategori budaya Bali">
+          <span class="cap-icon cap-icon-cat">🎭</span>
+          <div class="cap-meta">
+            <span class="cap-label">Kategori</span>
+            <span class="cap-value">Budaya &amp; Tradisi <span class="cap-chevron">&#9662;</span></span>
+          </div>
+        </div>
+
+        <a href="tentang.html" class="capsule-btn" title="Pelajari Lebih Lanjut Tentang SAKALA">
+          <span>Tentang SAKALA</span>
+          <span class="cap-btn-dot"></span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <section class="coveted-destinations-section" id="peta-jalur">
+
+    <div class="botanical-foliage foliage-top-right" aria-hidden="true">
+      <img src="assets/editorial/home/foliage-right-trimmed.webp?v=9.0" alt="Dekorasi Dedaunan Tropis Bali" class="foliage-img-right">
+    </div>
+
+    <div class="botanical-foliage foliage-bottom-left" aria-hidden="true">
+      <div class="grass-ground-shadow"></div>
+      <div class="grass-ground-mound"></div>
+      <img src="assets/editorial/home/grass-bottom-left.webp?v=3.0" alt="Dekorasi Rumput Tropis &amp; Butir Emas Bali" class="foliage-img-left">
+      <div class="grass-dew-sparkles">
+        <span class="dew-dot d1"></span>
+        <span class="dew-dot d2"></span>
+        <span class="dew-dot d3"></span>
+        <span class="dew-dot d4"></span>
+        <span class="dew-dot d5"></span>
+      </div>
+    </div>
+
+    <div class="coveted-container">
+
+      <div class="coveted-header-box reveal-on-scroll fade-down">
+        <h2 class="coveted-title">
+          Jelajahi Destinasi<br>
+          <span class="coveted-brush-wrap">
+            Unggulan
+            <svg class="coveted-brush-svg" viewBox="0 0 190 18" fill="none" preserveAspectRatio="none">
+              <path d="M4 11C45 4 140 3 186 10C140 16 45 15 4 11Z" fill="url(#covetedOrangeGrad)"/>
+              <defs>
+                <linearGradient id="covetedOrangeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#FF764C"/>
+                  <stop offset="100%" stop-color="#FF5429"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </span> SAKALA<br>
+          Terfavorit
+        </h2>
+
+        <p class="coveted-subtitle">
+          Dari kaldera megah Kintamani, tebing eksotis Nusa Penida, hingga kesakralan sunset tebing Uluwatu-temukan destinasi unggulan paling memikat di Pulau Bali.
+        </p>
+
+        <div class="coveted-btn-wrap">
+          <a href="#begin-culture" class="btn-orange-pill coveted-cta-btn">
+            <span class="cta-icon"></span> Temukan Perjalananmu
+          </a>
+        </div>
+      </div>
+
+      <div class="coveted-cards-grid reveal-on-scroll fade-up">
+
+        <article class="coveted-card card-step-1" onclick="openDestinationModal('nusa-penida')" role="button" tabindex="0" title="Klik untuk melihat detail &amp; lokasi Nusa Penida di Google Maps">
+
+          <div class="coveted-img-box">
+            <span class="placeholder-tag">Nusa Penida</span>
+            <img src="assets/editorial/home/nusa-penida.webp" alt="Destinasi Eksotis Nusa Penida Bali" class="coveted-card-img nusa-penida-img">
+          </div>
+
+          <div class="coveted-card-body">
+            <h3 class="dest-card-name">Nusa Penida</h3>
+
+            <div class="dest-card-rating">
+              <span class="dest-stars"></span>
+              <span class="dest-score-badge">
+                <span class="badge-dot"></span> 5.0/5
+              </span>
+            </div>
+
+            <div class="dest-card-location">
+              <span class="loc-pin"></span>
+              <span class="loc-name">Bali, Indonesia</span>
+            </div>
+
+            <div class="dest-card-price">
+              <b class="price-val">$ 150</b>
+              <span class="price-unit">/ Orang</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="coveted-card card-step-2" onclick="openDestinationModal('kintamani')" role="button" tabindex="0" title="Klik untuk melihat detail &amp; lokasi Kintamani di Google Maps">
+
+          <div class="coveted-img-box">
+            <span class="placeholder-tag">Kintamani</span>
+            <img src="assets/editorial/home/kintamani.webp" alt="Destinasi Eksotis Kaldera &amp; Terasering Kintamani Bali" class="coveted-card-img kintamani-img">
+          </div>
+
+          <div class="coveted-card-body">
+            <h3 class="dest-card-name">Kintamani</h3>
+
+            <div class="dest-card-rating">
+              <span class="dest-stars"><span class="star-dim"></span></span>
+              <span class="dest-score-badge">
+                <span class="badge-dot"></span> 4.8/5
+              </span>
+            </div>
+
+            <div class="dest-card-location">
+              <span class="loc-pin"></span>
+              <span class="loc-name">Bali, Indonesia</span>
+            </div>
+
+            <div class="dest-card-price">
+              <b class="price-val">$ 100</b>
+              <span class="price-unit">/ Orang</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="coveted-card card-step-3" onclick="openDestinationModal('uluwatu')" role="button" tabindex="0" title="Klik untuk melihat detail &amp; lokasi Uluwatu di Google Maps">
+
+          <div class="coveted-img-box">
+            <span class="placeholder-tag">Uluwatu</span>
+            <img src="assets/editorial/home/uluwatu.webp?v=2.0" alt="Destinasi Eksotis Tebing & Pura Uluwatu Bali" class="coveted-card-img uluwatu-img">
+          </div>
+
+          <div class="coveted-card-body">
+            <h3 class="dest-card-name">Uluwatu</h3>
+
+            <div class="dest-card-rating">
+              <span class="dest-stars"></span>
+              <span class="dest-score-badge">
+                <span class="badge-dot"></span> 4.9/5
+              </span>
+            </div>
+
+            <div class="dest-card-location">
+              <span class="loc-pin"></span>
+              <span class="loc-name">Bali, Indonesia</span>
+            </div>
+
+            <div class="dest-card-price">
+              <b class="price-val">$ 120</b>
+              <span class="price-unit">/ Orang</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="why-sakala-section" id="why-sakala">
+    <div class="wrap why-sakala-wrap">
+
+      <div class="why-left-col reveal-on-scroll fade-right">
+        <div class="why-header-box">
+          <h2 class="why-main-title">
+            Mengapa<br>
+            <span class="why-brush-wrap">
+              SAKALA?
+              <svg class="why-brush-svg" viewBox="0 0 220 22" fill="none" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="whyOrangeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#FF764C"/>
+                    <stop offset="100%" stop-color="#FF5429"/>
+                  </linearGradient>
+                </defs>
+                <path d="M4 14C55 4 175 3 216 13C175 20 55 20 4 14Z" fill="url(#whyOrangeGrad)"/>
+              </svg>
+            </span>
+          </h2>
+
+          <p class="why-main-subtitle">
+            Di SAKALA, kami mendedikasikan setiap langkah untuk menghubungkan Anda dengan kedalaman jiwa Bali-bukan sekadar wisata biasa, melainkan pengalaman hidup meresapi tradisi sakral, filosofi harmoni semesta, dan kehangatan tulus krama adat.
+          </p>
+
+          <div class="why-cta-wrap">
+            <a href="#begin-culture" class="btn-orange-pill why-cta-btn">
+              Mulai Eksplorasi Budaya
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="why-right-col reveal-on-scroll fade-left">
+
+        <div class="why-ticket-vine-line" aria-hidden="true"></div>
+
+        <div class="why-ticket-card">
+          <div class="ticket-stub">
+            <span class="ticket-stub-corner"></span>
+            <span class="ticket-num">01</span>
+            <div class="ticket-notch-top"></div>
+            <div class="ticket-notch-bottom"></div>
+          </div>
+          <div class="ticket-body">
+            <h3 class="ticket-title">Eksplorasi Budaya Autentik</h3>
+            <p class="ticket-desc">
+              Akses eksklusif mengenal ritual sakral, filosofi pura leluhur, dan tradisi kesenian langsung bersama krama banjar adat Bali tanpa sekat komersial.
+            </p>
+          </div>
+        </div>
+
+        <div class="why-ticket-card">
+          <div class="ticket-stub">
+            <span class="ticket-stub-corner"></span>
+            <span class="ticket-num">02</span>
+            <div class="ticket-notch-top"></div>
+            <div class="ticket-notch-bottom"></div>
+          </div>
+          <div class="ticket-body">
+            <h3 class="ticket-title">Harmoni Tri Hita Karana</h3>
+            <p class="ticket-desc">
+              Setiap rute perjalanan dirancang menghormati keselarasan spiritual (Parahyangan), sosial kemanusiaan (Pawongan), dan kelestarian alam semesta (Palemahan).
+            </p>
+          </div>
+        </div>
+
+        <div class="why-ticket-card">
+          <div class="ticket-stub">
+            <span class="ticket-stub-corner"></span>
+            <span class="ticket-num">03</span>
+            <div class="ticket-notch-top"></div>
+            <div class="ticket-notch-bottom"></div>
+          </div>
+          <div class="ticket-body">
+            <h3 class="ticket-title">Pemandu Pintar &amp; Etika Adat</h3>
+            <p class="ticket-desc">
+              Jelajahi kawasan sakral dengan percaya diri didampingi pemandu cerdas Manuk Jalak Bali-memahami tata krama pura, busana sembahyang, hingga cerita legenda di setiap destinasi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="why-bottom-landscape reveal-on-scroll fade-up" aria-hidden="true">
+      <img src="assets/editorial/home/elemen.webp?v=3.0" alt="Traveler santai menikmati alam Bali dan air kelapa" class="why-landscape-img" width="2172" height="642" loading="eager" decoding="async">
+    </div>
+  </section>
+
+  <section class="begin-section" id="begin-culture">
+    <div class="wrap">
+      <div class="begin-head reveal-on-scroll fade-down">
+        <span class="sec-tag">PINTU GERBANG KEBUDAYAAN BALI</span>
+        <h2 class="begin-title">Temukan Jiwa &amp; Tradisi Luhur Bali</h2>
+        <p class="begin-desc">
+          Kenali lebih dalam kearifan lokal, kesakralan upacara adat, keanggunan seni tari, hingga filosofi hidup masyarakat Bali yang senantiasa menjaga keseimbangan semesta.
+        </p>
+      </div>
+
+      <div class="explore-cats reveal-on-scroll pop-in">
+        <a class="cat-circle-card" href="kehidupan-lokal.html">
+          <div class="cat-icon-stage">
+            <img src="assets/editorial/home/budaya-tradisi.webp?v=9.0" alt="Budaya &amp; Tradisi Bali">
+          </div>
+          <b>Budaya &amp; Tradisi</b>
+          <span>Upacara &amp; Filosofi</span>
+        </a>
+        <a class="cat-circle-card" href="kehidupan-lokal.html">
+          <div class="cat-icon-stage">
+            <img src="assets/editorial/home/seni-warisan.webp?v=7.0" alt="Seni &amp; Warisan">
+          </div>
+          <b>Seni &amp; Warisan</b>
+          <span>Tari, Kriya &amp; Tenun</span>
+        </a>
+        <a class="cat-circle-card" href="kehidupan-lokal.html">
+          <div class="cat-icon-stage">
+            <img src="assets/editorial/home/kuliner-adat.webp?v=7.0" alt="Kuliner Adat">
+          </div>
+          <b>Kuliner Adat</b>
+          <span>Megibung &amp; Base Genep</span>
+        </a>
+        <a class="cat-circle-card" href="kehidupan-lokal.html">
+          <div class="cat-icon-stage">
+            <img src="assets/editorial/home/kehidupan-lokal.webp?v=7.0" alt="Kehidupan Lokal">
+          </div>
+          <b>Kehidupan Lokal</b>
+          <span>Krama Banjar &amp; Perajin</span>
+        </a>
+        <a class="cat-circle-card" href="kehidupan-lokal.html">
+          <div class="cat-icon-stage">
+            <img src="assets/editorial/home/subak.webp?v=6.0" alt="Filosofi Subak">
+          </div>
+          <b>Filosofi Subak</b>
+          <span>Harmoni Air UNESCO</span>
+        </a>
+        <a class="cat-circle-card" href="kehidupan-lokal.html">
+          <div class="cat-icon-stage">
+            <img src="assets/editorial/home/pura-leluhur.webp?v=6.0" alt="Pura Leluhur">
+          </div>
+          <b>Pura Leluhur</b>
+          <span>Kawasan Sakral Bali</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="culture-section" id="culture">
+    <div class="wrap">
+
+      <div class="story-grid reveal-on-scroll fade-left">
+        <img class="mascot-story-img" src="assets/eksplorasi/mascot/mascot_eat.webp" alt="Mascot Jalak Bali Menikmati Kuliner">
+        <div>
+          <span class="sec-tag">BUDAYA HIDUP • FILOSOFI • TRADISI</span>
+          <h2 style="font-size:clamp(30px, 3.5vw, 44px); margin-bottom:14px;">Lebih dari Sekadar Tradisi.</h2>
+          <p style="color:var(--text-muted); font-size:17px;">
+            Di balik setiap upacara, tarian, dan simbol budaya Bali, terdapat filosofi serta nilai kehidupan Tri Hita Karana yang dijaga dari generasi ke generasi untuk merawat keharmonisan semesta.
+          </p>
+          <div style="margin-top:24px;">
+            <a class="btn-orange-pill" href="kehidupan-lokal.html">
+              Jelajahi Budaya Bali
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="story-grid rev" id="food">
+        <div>
+          <span class="sec-tag" style="background:#FFEDD5; color:var(--coral-orange);">CITA RASA BALI</span>
+          <h2 style="font-size:clamp(30px, 3.5vw, 44px); margin-bottom:14px;">Perjalanan Melintasi Cita Rasa.</h2>
+          <p style="color:var(--text-muted); font-size:17px;">
+            Rasakan cita rasa khas Bali yang kaya akan rempah base genep, tradisi masak perlahan, dan kehangatan cerita di setiap hidangan warisan leluhur.
+          </p>
+          <div style="margin-top:24px;">
+            <a class="btn-orange-pill" href="kehidupan-lokal.html">
+              Jelajahi Kuliner Bali
+            </a>
+          </div>
+        </div>
+
+        <div class="food-plates reveal-on-scroll pop-in">
+          <div class="plate-item">
+            <img class="plate-img" src="assets/library/kuliner/betutu_animasi.webp" alt="Ayam Betutu Khas Bali">
+            <span>Ayam Betutu</span>
+            <small>Kuliner Rempah Base Genep</small>
+          </div>
+          <div class="plate-item">
+            <img class="plate-img" src="assets/library/kuliner/satelilit_animasi.webp" alt="Sate Lilit Tradisional">
+            <span>Sate Lilit</span>
+            <small>Aroma Batang Serai Gurih</small>
+          </div>
+          <div class="plate-item">
+            <img class="plate-img" src="assets/library/kuliner/lawar_animasi.webp" alt="Lawar Tradisional Bali">
+            <span>Lawar Tradisional</span>
+            <small>Warisan Harmoni Rasa Leluhur</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer-landscape-container reveal-on-scroll fade-up" aria-hidden="true">
+    <img src="assets/editorial/elemen-footer/elemen-footer-beranda.webp?v=4.0" alt="Panorama Alam Pura dan Danau Bali - Elemen Footer Original" class="footer-landscape-img" width="2172" height="412" loading="lazy" decoding="async">
+  </div>
+
+  <footer class="sakala-footer" aria-label="Informasi dan navigasi SAKALA">
+      <div class="sf-inner">
+        <div class="sf-invitation">
+          <div>
+            <h2>Masih ada Bali<br />yang belum kamu temui.</h2>
+            <p>Mulai dari satu tempat. Pulang dengan banyak cerita.</p>
+            <a class="sf-explore" href="destinasi.html#hero"
+              >Temukan tempatmu <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <img
+            class="sf-mascot"
+            src="assets/images/mascots/mascot_happy.webp"
+            alt="Kinara, maskot SAKALA, menyambut perjalananmu"
+            width="1396"
+            height="1134"
+            loading="lazy"
+          />
+        </div>
+        <div class="sf-directory">
+          <div class="sf-brand">
+            <a href="index.html" aria-label="SAKALA, beranda"
+              ><img
+                src="assets/images/logos/sakala-logo.webp"
+                alt="SAKALA"
+                width="2120"
+                height="740"
+                loading="lazy"
+            /></a>
+            <p>Temukan Bali. Rasakan ceritanya.</p>
+            <span>Alam, budaya, dan kehidupan yang membuat setiap perjalanan berarti.</span>
+          </div>
+          <nav class="sf-links" aria-label="Jelajahi Bali">
+            <h3>Jelajahi</h3>
+            <a href="destinasi.html#hero">Peta destinasi</a
+            ><a href="alam-bali.html">Alam Bali</a
+            ><a href="art.html">Seni & Budaya</a
+            ><a href="taste.html">Kuliner Bali</a>
+          </nav>
+          <nav class="sf-links" aria-label="Inspirasi perjalanan">
+            <h3>Mulai perjalanan</h3><a href="index.html">Beranda</a><a href="kehidupan-lokal.html">Kehidupan Lokal</a><a href="tentang.html">Tentang SAKALA</a>
+            <a href="destinasi.html#rencana">Rencana perjalanan</a
+            ><a href="cerita-bali.html">Cerita dari Bali</a
+            >
+          </nav>
+          <div class="sf-note">
+            <span aria-hidden="true">♡</span>
+            <p>Datang dengan rasa ingin tahu.<br />Pulang dengan rasa hormat.</p>
+            <small>Jaga alamnya, hargai budayanya.</small>
+          </div>
+        </div>
+        <div class="sf-bottom">
+          <p>© 2026 SAKALA</p>
+          <a href="#">Kembali ke atas <span aria-hidden="true">↑</span></a>
+        </div>
+      </div>
+    </footer>
+
+  <button id="btn-scroll-top" class="btn-scroll-top" onclick="scrollToTopAnimated()" title="Scroll Naik ke Atas" aria-label="Scroll Naik ke Atas">
+    <div class="scroll-top-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 15l-6-6-6 6"/>
+      </svg>
+    </div>
+    <span class="scroll-top-text">Naik</span>
+  </button>
+
+  <div id="mascot" onclick="openCultureChatModal()" title="Klik untuk Berbincang dengan Kinara!">
+    <div id="mascot-bubble">Lagi mau menjelajah apa nih di Bali? </div>
+    <img src="assets/editorial/maskot/mascot-flying.webp" alt="Mascot Jalak Bali SAKALA">
+  </div>
+
+  <div class="modal-overlay" id="chat-modal-backdrop" onclick="closeCultureChatModal(event)">
+    <div class="modal-box chat-modal-box" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeCultureChatModal()">&times;</button>
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+        <img src="assets/eksplorasi/mascot/mascot_hello.webp" alt="Manuk" style="width:48px; height:auto; filter:drop-shadow(0 4px 10px rgba(31,138,99,0.25));">
+        <div>
+          <h3 style="font-family:'Fredoka',sans-serif; color:#155240; font-size:20px; margin:0;">Mickey &amp; Kinara (Pemandu Budaya)</h3>
+          <span style="font-size:12px; color:#1F8A63; font-weight:700;"> â— Aktif Berbagi Cerita Tradisi Bali</span>
+        </div>
+      </div>
+      <div class="phone-chat" id="modal-chat-stream" style="max-height:240px; overflow-y:auto; margin-bottom:16px; display:flex; flex-direction:column; gap:8px;">
+        <div class="chat-bubble in">Om Swastiastu!  Selamat datang di SAKALA. Ada yang ingin kamu tanyakan seputar filosofi Tri Hita Karana, upacara Galungan, atau kesenian sakral Bali?</div>
+        <div class="chat-bubble out">Boleh ceritakan makna filosofi Tri Hita Karana? </div>
+        <div class="chat-bubble in">Tri Hita Karana adalah 3 pilar harmoni semesta: Parahyangan (hubungan suci dengan Tuhan), Pawongan (keharmonisan antar-manusia), dan Palemahan (menjaga kelestarian alam). </div>
+      </div>
+      <form class="phone-input" onsubmit="handleModalChatSubmit(event)" style="display:flex; gap:8px; background:#F1F5F9; padding:8px 14px; border-radius:999px;">
+        <input type="text" id="modal-chat-input" placeholder="Tanyakan tradisi, pura, tari, atau filosofi..." style="flex:1; border:none; background:transparent; outline:none; font:600 13px 'Nunito';" autocomplete="off">
+        <button type="submit" class="btn-orange-pill" style="padding:6px 16px; font-size:13px;">Kirim </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="video-modal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('video-modal')"></button>
+      <div style="font-size:44px; margin-bottom:10px;"></div>
+      <h3 style="font-size:26px; margin-bottom:8px;">Tur Virtual 360 Bali</h3>
+      <p style="color:#64748B; margin-bottom:20px;">
+        Saksikan prosesi sakral Upacara Melasti, tarian sakral Tari Kecak Uluwatu, dan keindahan Pura Ulun Danu Beratan dari perspektif 360 derajat!
+      </p>
+      <div style="width:100%; height:200px; background:#1E293B; border-radius:20px; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff; cursor:pointer;" onclick="triggerConfetti()">
+        <div style="font-size:48px;"></div>
+        <div style="margin-top:8px; font-size:13px; font-weight:700; color:#38BDF8;">Klik untuk Memutar Preview Tur 360</div>
+      </div>
+      <button class="btn-orange-pill" style="margin-top:24px; width:100%; justify-content:center;" onclick="closeModal('video-modal')">
+        Tutup &amp; Lanjutkan Petualangan
+      </button>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="quest-modal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('quest-modal')"></button>
+      <div style="font-size:44px; margin-bottom:10px;" id="quest-modal-icon"></div>
+      <h3 style="font-size:26px; margin-bottom:8px;" id="quest-modal-title">Judul Misi</h3>
+      <p style="color:#64748B; margin-bottom:24px; line-height:1.6;" id="quest-modal-desc">
+        Deskripsi misi petualangan.
+      </p>
+      <button class="btn-orange-pill" style="width:100%; justify-content:center;" onclick="closeModal('quest-modal'); triggerConfetti();">
+        Selesaikan Misi Ini!
+      </button>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="booking-modal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('booking-modal')"></button>
+      <div style="font-size:54px; margin-bottom:10px;"></div>
+      <h3 style="font-size:28px; margin-bottom:8px;" id="booking-modal-title">Hore! Booking Berhasil!</h3>
+      <p style="color:#64748B; margin-bottom:24px;" id="booking-modal-desc">
+        Paket petualangan Alaska &amp; Kintamani Camping telah dikonfirmasi. Michael (Guide) akan menghubungi nomormu untuk titik jemput.
+      </p>
+      <div style="background:#F0FDF4; border:2px dashed #22C55E; border-radius:20px; padding:16px; margin-bottom:24px; text-align:left;">
+        <b style="color:#15803D;">Status: Tiket Petualangan Terbit!</b>
+        <div style="font-size:13px; color:#475569; margin-top:4px;">Kode Booking: <b>SAKALA-CAMP-2026</b></div>
+        <div style="font-size:13px; color:#475569;">Termasuk: Tenda Dome, Sleeping Bag, Api Unggun &amp; Sarapan Sunrise.</div>
+      </div>
+      <button class="btn-orange-pill" style="width:100%; justify-content:center;" onclick="closeModal('booking-modal')">
+        Mantap, Siap Berangkat!
+      </button>
+    </div>
+  </div>
+
+  <div class="map-popup-overlay" id="map-popup-overlay" onclick="handleMapOverlayClick(event)">
+    <div class="map-popup-backdrop"></div>
+
+    <div class="map-destination-card" id="map-destination-card">
+
+      <div class="card-sunburst-aura"></div>
+      <div class="washi-tape washi-gold"></div>
+      <button type="button" class="popup-close-btn" onclick="closeDestinationPopup()" title="Tutup Penjelasan"></button>
+
+      <div class="popup-card-inner">
+
+        <div class="popup-meta-row">
+          <span class="popup-pillar-pill" id="popup-pillar-pill"> Parhyangan (Spiritual)</span>
+          <span class="popup-loc-tag" id="popup-loc-tag"> Karangasem, Bali Timur</span>
+        </div>
+
+        <div class="popup-hero-showcase">
+          <div class="popup-icon-stage">
+            <div class="popup-halo-ring"></div>
+            <img id="popup-landmark-icon" src="assets/editorial/home/pura.webp" alt="Landmark Budaya" class="popup-3d-img">
+          </div>
+          <div class="popup-title-group">
+            <h3 class="popup-landmark-title" id="popup-landmark-title">Pura Agung Besakih</h3>
+            <p class="popup-landmark-sub" id="popup-landmark-sub">Ibu Segala Pura (Mother Temple of Bali)</p>
+          </div>
+        </div>
+
+        <div class="popup-narrative-box">
+          <div class="popup-quote-bubble">
+            <span class="quote-mark"></span>
+            <p id="popup-landmark-quote">Pusat spiritual tertinggi di lereng Gunung Agung yang merangkul 23 kompleks pura, lambang kepatuhan dan keharmonisan makrokosmos.</p>
+          </div>
+
+          <div class="popup-funfact-card">
+            <div class="funfact-head">
+              <span class="funfact-icon"></span>
+              <strong>KEARIFAN LELUHUR &amp; TRADISI:</strong>
+            </div>
+            <p id="popup-landmark-funfact">Didirikan oleh Rsi Markandeya pada abad ke-8 Masehi sebagai cikal bakal peradaban spiritual Bali.</p>
+          </div>
+
+          <div class="popup-audio-bar" onclick="playCurrentLandmarkSound()" title="Klik untuk memutar alunan gamelan sakral">
+            <button type="button" class="audio-play-btn" id="audio-play-btn" aria-label="Putar Suara Gamelan">
+              <span class="play-icon"></span>
+            </button>
+            <div class="audio-info">
+              <span class="audio-title">Dengarkan Kidung &amp; Lonceng Sakral</span>
+              <span class="audio-sub">Sentuh untuk memutar alunan persembahan</span>
+            </div>
+            <div class="sound-wave-bars">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="popup-foot-actions">
+          <div class="popup-badge-stamped">
+            <span class="stamp-icon"></span>
+            <span class="stamp-text">Lencana Paspor Terbuka!</span>
+          </div>
+          <div class="popup-btn-group">
+            <button type="button" class="popup-btn-nav next" onclick="goToNextLandmark()">
+              Titik Berikutnya
+            </button>
+            <a href="#begin-culture" class="popup-btn-nav explore" onclick="closeDestinationPopup()">
+              Pelajari Nilai Ini
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="dest-modal-backdrop" onclick="closeDestinationModal(event)">
+    <div class="dest-modal-dialog" onclick="event.stopPropagation()">
+
+      <button type="button" class="dest-modal-close" onclick="closeDestinationModal()" aria-label="Tutup Detail Destinasi"></button>
+
+      <div class="dest-modal-top-head">
+        <h3 class="dest-modal-title">Destinasi Unggulan</h3>
+      </div>
+
+      <div class="dest-ticket-card">
+
+        <div class="ticket-upper-stub">
+          <div class="ticket-img-frame">
+            <img id="dest-modal-img" src="assets/editorial/home/nusa-penida.webp" alt="Foto Destinasi" class="ticket-dest-img">
+            <span class="ticket-img-badge" id="dest-modal-tag">Pantai Tebing &amp; Laut Biru Kristal</span>
+          </div>
+
+          <div class="ticket-meta-row">
+            <span class="ticket-rating" id="dest-modal-rating"> 5.0/5</span>
+            <span class="ticket-location" id="dest-modal-location"> Nusa Penida, Bali</span>
+          </div>
+
+          <h4 class="ticket-dest-name" id="dest-modal-name">Nusa Penida</h4>
+
+          <div class="ticket-price-row">
+            <span class="ticket-price-val" id="dest-modal-price">$ 150</span>
+            <span class="ticket-price-unit" id="dest-modal-unit">/ Orang  Paket Eksplorasi</span>
+          </div>
+
+          <p class="ticket-desc" id="dest-modal-desc">
+            Nikmati panorama tebing Kelingking Beach yang ikonik berbentuk T-Rex, deburan ombak kristal Diamond Beach, serta kejernihan air alami Broken Beach dan Angels Billabong.
+          </p>
+        </div>
+
+        <div class="ticket-perforation">
+          <div class="ticket-notch notch-left"></div>
+          <div class="ticket-notch notch-right"></div>
+        </div>
+
+        <div class="ticket-lower-stub">
+          <a id="dest-modal-gmaps-btn" href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn-gmaps-glowing">
+            <span>Cek Lokasi</span>
+          </a>
+          <div class="ticket-subtext">Navigasi rute resmi Google Maps  Membuka tab baru</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data-assets.js"></script>
+  <script src="js/main.js?v=5.0"></script>
+  <script src="js/beranda.js?v=5.7"></script>
+<script src="js/navigation.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,247 @@
+.sakala-footer {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0 28px;
+  background: #0f4d3a;
+  color: #fff;
+  font-family: Nunito, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+}
+.sakala-footer > .sf-inner {
+  display: block;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: 0;
+}
+.sakala-footer a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 400;
+  line-height: inherit;
+}
+.sakala-footer h3 {
+  letter-spacing: normal;
+  line-height: 1.6;
+}
+.sakala-footer a:focus-visible,
+.sakala-footer summary:focus-visible {
+  outline: 3px solid #fbb03b;
+  outline-offset: 5px;
+}
+.sakala-footer .sf-invitation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 60px 0 48px;
+  border-bottom: 1px solid #cdefd933;
+}
+.sakala-footer h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(30px, 3.4vw, 48px);
+  line-height: 1.15;
+  letter-spacing: -1px;
+  font-weight: 900;
+}
+.sakala-footer .sf-invitation p {
+  margin: 20px 0 24px;
+  color: #cdefd9;
+}
+.sakala-footer .sf-explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+  padding: 13px 23px;
+  border-radius: 999px;
+  background: #ff6636;
+  color: #111827;
+  font-weight: 900;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.sakala-footer .sf-explore:hover {
+  background: #fbb03b;
+  transform: translateY(-2px);
+}
+.sakala-footer .sf-explore span {
+  font-size: 23px;
+  line-height: 1;
+}
+.sakala-footer .sf-mascot {
+  width: 235px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 35px;
+}
+.sakala-footer .sf-directory {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.15fr;
+  gap: 40px;
+  padding: 44px 0;
+}
+.sakala-footer .sf-brand img {
+  display: block;
+  width: 185px;
+  height: auto;
+}
+.sakala-footer .sf-brand p {
+  margin: 13px 0 7px;
+  font-size: 15px;
+  font-weight: 800;
+}
+.sakala-footer .sf-brand span {
+  display: block;
+  color: #cdefd9;
+  font-size: 14px;
+  max-width: 260px;
+}
+.sakala-footer .sf-links {
+  line-height: 1.6;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+.sakala-footer h3 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 900;
+}
+.sakala-footer .sf-links a {
+  color: #cdefd9;
+}
+.sakala-footer .sf-links a:hover,
+.sakala-footer .sf-bottom a:hover {
+  color: #fbb03b;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.sakala-footer .sf-note {
+  border-left: 1px solid #cdefd933;
+  padding-left: 26px;
+}
+.sakala-footer .sf-note > span {
+  font-size: 30px;
+  color: #fbb03b;
+  line-height: 1;
+}
+.sakala-footer .sf-note p {
+  margin: 12px 0;
+  font-size: 15px;
+  font-weight: 800;
+}
+.sakala-footer .sf-note small {
+  color: #cdefd9;
+  font-size: 13px;
+}
+.sakala-footer .sf-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 20px;
+  padding: 22px 0;
+  border-top: 1px solid #cdefd933;
+  font-size: 13px;
+  color: #cdefd9;
+}
+.sakala-footer .sf-bottom p {
+  margin: 0;
+}
+.sakala-footer .sf-bottom > a {
+  margin-left: auto;
+  white-space: nowrap;
+}
+.sakala-footer .sf-bottom span {
+  font-size: inherit;
+}
+.sakala-footer details {
+  max-width: 510px;
+}
+.sakala-footer summary {
+  cursor: pointer;
+}
+.sakala-footer details p {
+  padding-top: 12px;
+  font-size: 12px;
+}
+@media (max-width: 900px) {
+  .sakala-footer .sf-directory {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+  .sakala-footer .sf-mascot {
+    width: 180px;
+    margin-right: 0;
+  }
+  .sakala-footer .sf-note {
+    padding-left: 0;
+    border: 0;
+  }
+}
+@media (max-width: 580px) {
+  .sakala-footer {
+    padding: 0 22px;
+  }
+  .sakala-footer .sf-invitation {
+    padding: 36px 0;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .sakala-footer h2 {
+    font-size: 29px;
+    letter-spacing: -0.6px;
+  }
+  .sakala-footer .sf-invitation > div {
+    flex: 1;
+  }
+  .sakala-footer .sf-invitation p {
+    font-size: 14px;
+  }
+  .sakala-footer .sf-mascot {
+    width: 72px;
+    margin-top: 8px;
+  }
+  .sakala-footer .sf-explore {
+    gap: 14px;
+    padding: 12px 17px;
+    font-size: 14px;
+  }
+  .sakala-footer .sf-directory {
+    gap: 28px 18px;
+    padding: 32px 0;
+  }
+  .sakala-footer .sf-brand,
+  .sakala-footer .sf-note {
+    grid-column: 1 / -1;
+  }
+  .sakala-footer .sf-brand span {
+    max-width: 340px;
+  }
+  .sakala-footer .sf-note {
+    padding-top: 22px;
+    border-top: 1px solid #cdefd933;
+  }
+  .sakala-footer .sf-bottom {
+    gap: 14px 24px;
+  }
+  .sakala-footer .sf-bottom > a {
+    margin-left: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sakala-footer .sf-explore {
+    transition: none;
+  }
+}

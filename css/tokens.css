@@ -1,0 +1,165 @@
+
+:root {
+  --deepest-forest: #0f4d3a;
+  --deep-forest: #14634a;
+  --primary-emerald: #1f8a63;
+  --sage: #9acd5a;
+  --soft-mint: #cdefd9;
+  --light-mint: #ddf3b0;
+  --sky-top: #b1d3f8;
+  --sky-bottom: #e6faf6;
+  --blue-mascot: #2169b5;
+  --ocean: #7ccbc3;
+  --coral: #ff6636;
+  --sunset-coral: #ff764c;
+  --terracotta: #d85d38;
+  --terracotta-soft: #fdf1ed;
+  --ceremonial-gold: #d7a747;
+  --sun-yellow: #fbb03b;
+  --light-gold: #fff2a1;
+  --white: #ffffff;
+  --warm-cream: #fdfbf7;
+  --warm-ivory: #f7f1e7;
+  --sand: #f7faf7;
+  --dark-slate: #111827;
+  --muted-slate: #64748b;
+  --forest: var(--deepest-forest);
+  --green: var(--primary-emerald);
+  --orange: var(--coral);
+  --lime: var(--light-mint);
+}
+body {
+  color: var(--deepest-forest);
+}
+h1,
+h2,
+h3 {
+  color: inherit;
+}
+footer,
+.e-footer {
+  background: var(--deepest-forest);
+}
+.hero:before {
+  background: linear-gradient(var(--sky-top), var(--sky-top));
+}
+.button,
+.btn,
+.r-btn {
+  background: var(--deep-forest);
+  color: var(--white);
+}
+.hero-actions > .button:first-child,
+.r-nature-copy .r-btn,
+.panel .btn,
+.button[data-action='explore'] {
+  background: var(--coral);
+  color: var(--deepest-forest);
+}
+.button:hover,
+.btn:hover,
+.r-btn:hover {
+  background: var(--primary-emerald);
+  color: white;
+}
+.hero-actions > .button:first-child:hover,
+.r-nature-copy .r-btn:hover {
+  background: var(--sunset-coral);
+  color: var(--deepest-forest);
+}
+.button-ghost,
+.hero-copy .button-ghost {
+  background: var(--white);
+  color: var(--deep-forest);
+  border-color: var(--soft-mint);
+}
+.nav-trip,
+.nav-right .btn {
+  background: var(--white);
+  color: var(--deep-forest);
+}
+.pill.active,
+.filters button.active,
+.filters b,
+.r-duration button.active {
+  background: var(--primary-emerald);
+  border-color: var(--primary-emerald);
+  color: var(--white);
+}
+.hero-card > div > span,
+.experience-photo > span,
+.r-day-number {
+  background: var(--light-gold);
+  color: var(--deepest-forest);
+}
+.save[aria-pressed='true'] {
+  background: var(--soft-mint);
+  outline: 2px solid var(--primary-emerald);
+}
+.hero-card h2,
+.nature-caption h3,
+.culture-photo h3 {
+  color: var(--white);
+}
+.hero-pagination button {
+  color: var(--terracotta);
+  border-color: var(--soft-mint);
+  background: var(--white);
+}
+.postcard-section,
+.stories,
+.place,
+.discover {
+  background: var(--warm-cream);
+}
+.experience-section,
+.r-plan,
+.journal {
+  background: var(--sand);
+}
+.eyebrow {
+  color: var(--terracotta);
+}
+.hero-copy .eyebrow {
+  color: var(--deepest-forest);
+}
+.feature-copy,
+.travel-note,
+.photo-caption {
+  background: var(--warm-cream);
+}
+.tag {
+  background: var(--light-gold);
+  color: var(--deepest-forest);
+}
+.hero-location,
+.breadcrumb,
+.hero-guide > div {
+  background: var(--soft-mint);
+  color: var(--deepest-forest);
+}
+.hero-copy > p,
+.postcard-heading > p,
+.experience-heading > p,
+.experience-stop > p {
+  color: var(--muted-slate);
+}
+
+.button:not(.button-ghost) > img.icon,
+.btn > img.icon,
+.r-btn > img.icon {
+  filter: brightness(0) invert(1);
+}
+.hero-actions > .button:first-child > img.icon,
+.r-nature-copy .r-btn > img.icon,
+.nav-right .btn > img.icon {
+  filter: none;
+}
+.pill.active > img.icon {
+  filter: brightness(0) invert(1);
+}
+
+.island > img,
+.island-image {
+  filter: saturate(0.72);
+}

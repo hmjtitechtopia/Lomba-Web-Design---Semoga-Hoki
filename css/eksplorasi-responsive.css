@@ -1,0 +1,47 @@
+.mobile-art-guide { display: none; }
+
+body[data-site-page='art'] main .hidden { display: none !important; }
+#livingPopupRoot.hidden, #detailViewerModal.hidden, #activityModal.hidden { display: none !important; }
+@media (max-width: 1279px) {
+  body[data-site-page='art'] #livingPopupRoot:not(.hidden) {
+    z-index: 1100 !important;
+    overflow-y: auto;
+  }
+  #artRailLeftBtn, #artRailRightBtn { display: none !important; }
+  #workCardsRail { width: 100% !important; touch-action: pan-x pan-y; }
+  #artPanel { margin-top: 12px !important; }
+  .book-perspective-wrapper, .book-controls-row { display: none !important; }
+  .mobile-art-guide { display: grid; gap: 12px; width: min(100%, 720px); margin: 24px auto; }
+  .mobile-art-guide details { padding: 20px; background: #f7faF7; border: 1px solid #cdefd9; border-radius: 20px; }
+  .mobile-art-guide summary { font-size: 18px; font-weight: 900; cursor: pointer; min-height: 44px; }
+  .mobile-art-guide p { font-size: 16px; line-height: 1.7; margin: 12px 0; color: #0f4d3a; }
+  #calSheetUnder { display: none !important; }
+  #calSheetFront { transform: none !important; }
+  .cal-sheets-wrapper { min-height: 0 !important; }
+  #platterContainer { aspect-ratio: 1.5 !important; max-height: 270px !important; margin: 8px auto !important; }
+  #heroRailContainer { gap: 4px !important; }
+  #dishCardsRail { padding-inline: 4px !important; }
+  #restaurantDrawer { height: auto !important; max-height: 620px !important; }
+  #spiceTrackViewport { overflow: hidden !important; height: 300px !important; padding: 20px 0 !important; }
+  #spiceRowContainer { gap: 22px !important; }
+  .spice-carousel-item { width: 190px !important; flex: 0 0 190px !important; height: 250px !important; }
+  .spice-item-imgbox { transform: none !important; width: 150px !important; height: 160px !important; margin: auto !important; }
+  .spice-item-imgbox img { width: 100% !important; height: 100% !important; object-fit: contain; }
+  .spice-item-glow { width: 190px !important; height: 190px !important; }
+  #section-5-4-wrapper, #section-5-4-scaler, #section-5-4-frame { height: auto !important; position: relative !important; }
+  #mapClipWrapper { flex-shrink: 0; }
+  #mapRightSheet { flex-shrink: 0; max-width: 720px !important; padding: 22px !important; }
+  #mapSheetContent { overflow: visible !important; }
+  #mapRightSheet > *, #mapSheetContent > * { flex-shrink: 0; }
+  #mapClipWrapper .map-header-overlay { z-index: 20; }
+  body[data-site-page='taste'] #section1Bg { width: 100% !important; }
+}
+@media (max-width: 639px) {
+  #spiceCarouselWrapper { gap: 4px !important; padding-inline: 0 !important; }
+  #spicePrevArrowBtn, #spiceNextArrowBtn { min-width: 38px !important; width: 38px !important; height: 38px !important; min-height: 38px !important; }
+  .cal-sheet-header { padding-inline: 12px !important; }
+  .cal-sheet-title { font-size: 20px !important; }
+  .cal-sticky-note { padding: 24px !important; }
+}
+
+.mobile-art-guide { pointer-events: auto; }
